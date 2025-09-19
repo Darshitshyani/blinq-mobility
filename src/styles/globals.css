@@ -1,0 +1,515 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* External carousel styles */
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+/* ------------------------------
+   Fonts (Poppins Family)
+------------------------------ */
+@font-face {
+  font-family: "Poppins";
+  src: url("../../public/font/PoppinsThin.ttf") format("truetype");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../public/font/PoppinsExtraLight.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../public/font/PoppinsLight.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../public/font/PoppinsRegular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../public/font/PoppinsMedium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../public/font/PoppinsSemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../public/font/PoppinsBold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../public/font/PoppinsExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../public/font/PoppinsBlack.ttf") format("truetype");
+  font-weight: 900;
+}
+
+/* ------------------------------
+   Custom Utilities
+------------------------------ */
+.res-nav {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Focus Effect */
+.focus-container {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: start;
+}
+.focus-word {
+  position: relative;
+  font-size: 40px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: filter 0.3s ease, color 0.3s ease;
+}
+.focus-word.active {
+  filter: blur(0);
+  color: var(--border-color, #fff);
+}
+.focus-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  box-sizing: content-box;
+  border: none;
+}
+.corner {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border: 3px solid var(--border-color, #fff);
+  filter: drop-shadow(0px 0px 4px var(--border-color, #fff));
+  border-radius: 3px;
+}
+.top-left {
+  top: -10px;
+  left: -10px;
+  border-right: none;
+  border-bottom: none;
+}
+.top-right {
+  top: -10px;
+  right: -10px;
+  border-left: none;
+  border-bottom: none;
+}
+.bottom-left {
+  bottom: -10px;
+  left: -10px;
+  border-right: none;
+  border-top: none;
+}
+.bottom-right {
+  bottom: -10px;
+  right: -10px;
+  border-left: none;
+  border-top: none;
+}
+
+@media (max-width: 600px) {
+  .focus-word {
+    font-size: 30px;
+  }
+}
+
+/* Blobs */
+.blob-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.blob-main {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+  user-select: none;
+}
+.blob {
+  position: absolute;
+  will-change: transform;
+  transform: translate(-50%, -50%);
+}
+.inner-dot {
+  position: absolute;
+}
+
+/* ------------------------------
+   Keyframes & Animations
+------------------------------ */
+@keyframes slide-in-left {
+  from {
+    transform: translateX(100%);
+    opacity: 0.7;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.animate-slide-in-left {
+  animation: slide-in-left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.animate-fade-in {
+  animation: fade-in 0.25s ease;
+}
+
+@keyframes slide-out-right {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0.7;
+  }
+}
+.animate-slide-out-right {
+  animation: slide-out-right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes battery-loop {
+  0% {
+    height: 0%;
+    opacity: 0.7;
+  }
+  50% {
+    height: 100%;
+    opacity: 1;
+  }
+  100% {
+    height: 0%;
+    opacity: 0.7;
+  }
+}
+@keyframes car-drive {
+  0% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Scroll Animation Keyframes */
+@keyframes slide-in-up {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-down {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes rotate-in {
+  from {
+    transform: rotate(-5deg) scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ------------------------------
+   Tailwind Layers
+------------------------------ */
+@layer base {
+ 
+  :root {
+    --background: 220 15% 8%;
+    --foreground: 210 40% 98%;
+
+    /* Brand */
+    --electric-blue: 200 100% 60%;
+    --electric-cyan: 180 100% 70%;
+    --electric-green: 140 80% 60%;
+    --electric-purple: 270 80% 70%;
+
+    /* Status */
+    --success: 140 80% 60%;
+    --warning: 45 100% 65%;
+    --danger: 0 84% 60%;
+
+    /* Components */
+    --card: 220 15% 12%;
+    --card-foreground: 210 40% 98%;
+    --card-glow: 220 20% 15%;
+
+    --popover: 220 15% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 200 100% 60%;
+    --primary-foreground: 220 15% 8%;
+    --primary-glow: 200 100% 70%;
+
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 15% 20%;
+    --muted-foreground: 215 15% 70%;
+
+    --accent: 180 100% 70%;
+    --accent-foreground: 220 15% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 15%;
+    --ring: 200 100% 60%;
+
+    /* Gradients */
+    --gradient-electric: linear-gradient(
+      135deg,
+      hsl(var(--electric-blue)),
+      hsl(var(--electric-cyan))
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(var(--background)),
+      hsl(220 20% 12%)
+    );
+    --gradient-card: linear-gradient(
+      135deg,
+      hsl(var(--card)),
+      hsl(var(--card-glow))
+    );
+
+    /* Glows */
+    --glow-primary: 0 0 40px hsl(var(--primary) / 0.4);
+    --glow-accent: 0 0 30px hsl(var(--accent) / 0.3);
+
+    --radius: 0.5rem;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+@layer utilities {
+  /* Extra utilities */
+  .animate-battery-loop {
+    animation: battery-loop 3s ease-in-out infinite;
+  }
+  .animate-car-drive {
+    animation: car-drive 3s ease-in-out infinite;
+  }
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Scroll Animation Utilities */
+  .animate-slide-in-up {
+    animation: slide-in-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  .animate-slide-in-down {
+    animation: slide-in-down 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  .animate-slide-in-left {
+    animation: slide-in-left 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  .animate-slide-in-right {
+    animation: slide-in-right 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  .animate-scale-in {
+    animation: scale-in 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  .animate-rotate-in {
+    animation: rotate-in 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  .animate-bounce-in {
+    animation: bounce-in 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+
+  /* Scroll Animation States */
+  .scroll-animate-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .scroll-animate-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .text-gradient {
+    background: var(--gradient-electric);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+  .bg-card-gradient {
+    background: var(--gradient-card);
+  }
+
+  .shadow-electric {
+    box-shadow: var(--glow-primary);
+  }
+  .shadow-accent {
+    box-shadow: var(--glow-accent);
+  }
+}
