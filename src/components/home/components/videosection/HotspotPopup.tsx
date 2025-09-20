@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Hotspot } from './InteractiveVideo';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import { useRouter } from 'next/router';
 
 interface HotspotPopupProps {
   hotspot: Hotspot;
@@ -12,7 +13,7 @@ interface HotspotPopupProps {
 
 export const HotspotPopup = ({ hotspot, position, onClose, onMouseEnter, onMouseLeave }: HotspotPopupProps) => {
   const [isVisible, setIsVisible] = useState(false);
-
+const router = useRouter()
   useEffect(() => {
     // Trigger entrance animation
     const timer = setTimeout(() => setIsVisible(true), 10);
@@ -37,7 +38,9 @@ export const HotspotPopup = ({ hotspot, position, onClose, onMouseEnter, onMouse
   onMouseEnter={onMouseEnter}
   onMouseLeave={onMouseLeave}
 >
-  <p className='text-foreground text-lg cursor-pointer z-[1000] hover:text-'>{hotspot.title}</p>
+  <p className='text-foreground text-lg cursor-pointer z-[1000] hover:text-' onClick={()=>{
+router.push(hotspot.links)
+  }}>{hotspot.title}</p>
   <KeyboardArrowRightIcon />
   
 </div>

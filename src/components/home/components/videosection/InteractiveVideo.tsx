@@ -35,7 +35,7 @@ const DEFAULT_HOTSPOTS: Hotspot[] = [
     id: 'aboutus',
     x: 58,
     y: 34,
-    title: 'Repot',
+    title: 'About Us',
     links: "/about-us",
   },
   {
