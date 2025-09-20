@@ -132,7 +132,7 @@ const SolvingModule = () => {
       {[...Array(5)].map((_, i) => (
         <div
           key={i}
-          className={`w-12 h-8 bg-electric-green rounded-lg transition-all duration-500 ${
+          className={` w-10 md:w-12 h-8 bg-electric-green rounded-lg transition-all duration-500 ${
             isVisible ? "scale-100 opacity-100" : "scale-0 opacity-0"
           }`}
           style={{ transitionDelay: `${i * 100}ms` }}
@@ -236,7 +236,7 @@ const SolvingModule = () => {
               <div
                 className={`flex justify-center ${index % 2 === 1 ? "md:order-1" : ""}`}
               >
-                <div className="bg-card-gradient border border-border rounded-2xl p-12 shadow-accent min-h-[200px] flex items-center justify-center">
+                <div className="bg-card-gradient border border-border rounded-2xl p-10 md:p-12 shadow-accent min-h-[200px] flex items-center justify-center">
                   {renderAnimation(step, visibleSteps.has(step.id))}
                 </div>
               </div>

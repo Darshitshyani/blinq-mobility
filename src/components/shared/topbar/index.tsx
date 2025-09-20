@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CustomButton from "../CustomButton";
-import { Logo } from "@/untils/images";
+import  Logo  from "@/untils/images/logo 1.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
 import CloseIcon from "@mui/icons-material/Close";
@@ -51,13 +51,13 @@ const Topbar = () => {
 						className="text-[22px] text-white font-bold flex mb-0 items-center cursor-pointer"
 						onClick={() => router.push("/")}
 					>
-						<span className="mr-2">
+						
 							<Image
 								src={Logo}
 								alt="Logo"
-								className="w-[200px]  object-contain"
+								className="  w-[80px] md:w-[120px] h-auto object-contain"
 							/>
-						</span>
+						
 						
 					</h1>
 				</div>

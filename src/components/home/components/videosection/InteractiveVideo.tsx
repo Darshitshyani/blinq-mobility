@@ -6,69 +6,44 @@ export interface Hotspot {
   x: number; // percentage
   y: number; // percentage
   title: string;
-  description: string;
-  links: Array<{
-    label: string;
-    url: string;
-    icon?: string;
-  }>;
+  links: string;
 }
 
 const DEFAULT_HOTSPOTS: Hotspot[] = [
   {
-    id: 'microfactory',
+    id: 'Home',
     x: 35,
     y: 15,
-    title: 'Microfactory',
-    description: 'Advanced manufacturing solutions for the future',
-    links: [
-      { label: 'Learn More', url: '#microfactory', icon: '🏭' },
-      { label: 'Technology', url: '#tech', icon: '⚙️' },
-    ],
+    title: 'Home',
+    links:"/home",
   },
   {
-    id: 'taxi',
+    id: 'Technology',
     x: 52,
     y: 30,
-    title: 'The Taxi',
-    description: 'Autonomous transportation network',
-    links: [
-      { label: 'Book a Ride', url: '#taxi', icon: '🚕' },
-      { label: 'Fleet Info', url: '#fleet', icon: '📊' },
-    ],
+    title: 'Technology',
+    links: "/technology",
   },
   {
-    id: 'blinq-swap',
+    id: 'Feets',
     x: 50,
     y: 60,
-    title: 'Blinq Swap',
-    description: 'Instant asset exchange platform',
-    links: [
-      { label: 'Start Trading', url: '#swap', icon: '🔄' },
-      { label: 'Analytics', url: '#analytics', icon: '📈' },
-    ],
+    title: 'Feets',
+    links: "/feets",
   },
   {
-    id: 'repot',
+    id: 'aboutus',
     x: 58,
     y: 34,
     title: 'Repot',
-    description: 'Sustainable urban gardening solutions',
-    links: [
-      { label: 'Garden Now', url: '#repot', icon: '🌱' },
-      { label: 'Sustainability', url: '#green', icon: '♻️' },
-    ],
+    links: "/about-us",
   },
   {
-    id: 'blinq',
+    id: 'Blogs',
     x: 80,
     y: 20,
-    title: 'Blinq',
-    description: 'Next-generation connectivity platform',
-    links: [
-      { label: 'Connect', url: '#blinq', icon: '⚡' },
-      { label: 'API Docs', url: '#docs', icon: '📚' },
-    ],
+    title: 'Blogs',
+    links: "/blogs",
   },
 ];
 
@@ -117,7 +92,7 @@ export const InteractiveVideo = () => {
     
 
       {/* Video Container */}
-      <div className="video-container relative bg-card rounded-xl overflow-hidden shadow-2xl">
+      <div className="video-container relative bg-card  overflow-hidden shadow-2xl">
        <video
   ref={videoRef}
   className="w-full h-auto object-cover"
@@ -147,12 +122,8 @@ export const InteractiveVideo = () => {
             }}
           >
     <span
-  className="block rounded-full border-white bg-blue-500 shadow-lg animate-border-blink"
-  style={{
-    width: "30px",
-    height: "30px",
-    display: "inline-block",
-  }}
+  className="block rounded-full border-white  bg-white/10 backdrop-blur-md backdrop-saturate-150 shadow-lg animate-border-blink w-[15px] md:w-[20px] h-[15px] md:h-[20px]"
+  
 />
             </div>
        

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Hotspot } from './InteractiveVideo';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 interface HotspotPopupProps {
   hotspot: Hotspot;
@@ -21,30 +22,26 @@ export const HotspotPopup = ({ hotspot, position, onClose, onMouseEnter, onMouse
 
 
   return (
-    <div
-      className={`popup absolute z-20 bg-background p-4 rounded-xl ${isVisible ? 'popup-enter-active' : 'popup-enter'}`}
-      style={{
-        left: position.x,
-        top: position.y - 10,
-        transform: 'translateX(-50%) translateY(-100%)',
-        minWidth: '280px',
-        maxWidth: '320px',
-      }}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-    >
+   <div
+  className={`popup absolute z-20 p-4 rounded-xl flex justify-center items-center w-fit  border border-white/20 shadow-xl 
+    bg-white/10 backdrop-blur-md backdrop-saturate-150
+    ${isVisible ? 'popup-enter-active' : 'popup-enter'}`}
+  style={{
+    left: position.x,
+    top: position.y - 5,
+    transform: 'translateX(-50%) translateY(-100%)',
    
+    WebkitBackdropFilter: 'blur(8px) saturate(150%)', // Safari support
+    backdropFilter: 'blur(8px) saturate(150%)',
+  }}
+  onMouseEnter={onMouseEnter}
+  onMouseLeave={onMouseLeave}
+>
+  <p className='text-foreground text-lg cursor-pointer z-[1000] hover:text-'>{hotspot.title}</p>
+  <KeyboardArrowRightIcon />
+  
+</div>
 
-      {/* Header */}
-      <div className="flex items-center justify-between mb-3">
-       
-     <p></p>
-      </div>
-
-     
-
-    
-      </div>
    
   );
 };
