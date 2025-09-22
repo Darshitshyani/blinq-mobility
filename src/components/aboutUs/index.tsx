@@ -3,9 +3,8 @@ import { Card } from '@/components/shared/Card';
 import { Badge } from '@/components/shared/Badge';
 import { Zap, Target, Eye, Users, Award, Car } from 'lucide-react';
 
-// Import team images
 import abhilashaImage from '@/untils/images/Abhilasha.jpg';
-import gp from "@/untils/images/grp .jpg"
+import gp4 from "@/untils/images/gp4.jpg"
 import ajeetImg from '@/untils/images/Ajeet.jpg';
 import ankitImg from '@/untils/images/ankit.jpg.png';
 import manasiImg from '@/untils/images/Manasi.jpg';
@@ -137,7 +136,7 @@ const About = () => {
                 className="rounded-2xl shadow-electric w-full aspect-[4/3] object-cover"
               />
               <Image 
-                src={gp} 
+                src={gp4} 
                 alt="Team collaborating in workspace"
                 className="rounded-2xl shadow-accent w-full aspect-[4/3] object-cover"
               />

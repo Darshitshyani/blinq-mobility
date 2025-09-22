@@ -4,11 +4,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import fiireImg from "@/untils/images/1.png";
-import dpiitImg from "@/untils/images/2.png";
-import wadhwaniImg from "@/untils/images/3.png";
+import dpiitImg from "@/untils/images/6.png";
+import wadhwaniImg from "@/untils/images/2.png";
 import deshpandeImg from "@/untils/images/4.png";
-import razorpayImg from "@/untils/images/5.png";
-import iitImg from "@/untils/images/6.png";
+import razorpayImg from "@/untils/images/3.png";
+import iitImg from "@/untils/images/5.png";
 import atalImg from "@/untils/images/Atal_Incubation_Centre_Banasthali_Vidyapith_0e560e4ffa.png";
 import Image from "next/image";
 
@@ -93,18 +93,7 @@ export default function NewsroomHighlights() {
           </p>
         </div>
 
-        {/* <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in" style={{ animationDelay: "200ms" }}>
-          {categories.map((category) => (
-            <Badge
-              key={category}
-              variant="outline"
-              className="px-6 py-3 text-sm font-medium cursor-pointer hover:bg-primary/10 hover:text-primary hover:border-primary/40 transition-all duration-300 bg-card/50 backdrop-blur-sm"
-            >
-              {category}
-            </Badge>
-          ))}
-        </div> */}
- <div className="mt-20 grid grid-cols-2 mt-[80px] md:grid-cols-4 gap-8 animate-fade-in" style={{ animationDelay: "800ms" }}>
+ {/* <div className="mt-20 grid grid-cols-2 mt-[80px] md:grid-cols-4 gap-8 animate-fade-in" style={{ animationDelay: "800ms" }}>
           {[
             { number: "7+", label: "Strategic Partners" },
             { number: "4", label: "Key Categories" },
@@ -120,7 +109,7 @@ export default function NewsroomHighlights() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
         {/* Highlights Carousel */}
         <div className="relative py-16 mt-[40px]">
           <Slider

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import CustomButton from "../CustomButton";
 import  Logo  from "@/untils/images/logo 1.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
@@ -75,7 +74,11 @@ const Topbar = () => {
 					>
 						Home
 					</p>
-					<p className="cursor-pointer hover:text-primary-main transition-colors duration-200">Technology</p>
+					<p className="cursor-pointer hover:text-primary-main transition-colors duration-200" onClick={
+						()=>{
+							router.push("/technology")
+						}
+					}>Technology</p>
 					<p
 						className="cursor-pointer hover:text-primary-main transition-colors duration-200"
 						onClick={() => router.push("/portfolio")}
@@ -165,7 +168,11 @@ const Topbar = () => {
 									className={`w-full flex justify-between items-center py-4 cursor-pointer 
 										
 									`}
-									
+									onClick={
+						()=>{
+							router.push("/technology")
+						}
+					}
 								>
 									Technology
 									
