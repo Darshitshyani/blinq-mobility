@@ -196,7 +196,7 @@ const Tech = () => {
       </section>
 
       {/* Tech Features Section */}
-      <section className="py-24 ">
+      <section className="py-10 md:py-24">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-black mb-6">
@@ -277,7 +277,7 @@ const Tech = () => {
       </section>
 
       {/* Battery Swapping Section */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-10 md:py-24 overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0">
           <div className="absolute " />
@@ -425,7 +425,7 @@ const Tech = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 text-center ">
+      <section className="py-10 md:py-24 text-center ">
         <div className="container mx-auto px-6 ">
           <h2 className="text-4xl font-black mb-6">
             Experience the <span className="text-gradient">Future</span> of Urban Transport
