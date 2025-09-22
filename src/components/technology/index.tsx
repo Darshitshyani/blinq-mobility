@@ -8,7 +8,7 @@ const TechPage = () => {
 
 
       {/* Hero Section */}
-      <div className="flex min-h-screen items-center justify-center pt-20">
+      <div className="flex min-h-screen items-center justify-center pt-20 ">
         <div className="text-center space-y-8 container mx-auto px-6">
           <div className="space-y-4">
             <h1 className="text-6xl lg:text-8xl font-black">

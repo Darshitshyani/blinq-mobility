@@ -111,7 +111,7 @@ const Tech = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen mt-[30px]">
       {/* Hero Section - Car Technology */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background gradient */}
