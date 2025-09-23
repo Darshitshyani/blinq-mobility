@@ -169,25 +169,27 @@ const Tech = () => {
 
           {/* Hero image */}
           <div className={`relative ${heroAnimation.isVisible ? 'animate-scale-in' : 'opacity-0'}`}>
-            <div className="relative">
-                 
+           <div className={`relative ${heroAnimation.isVisible ? 'animate-scale-in' : 'opacity-0'}`}>
             <CyclingHeroImage />
-          
-              <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent rounded-2xl" />
-              
-              {/* Floating tech indicators */}
               <div className="absolute top-4 right-4 animate-bounce-in h-fit">
                 <div className="bg-card/90 backdrop-blur-sm rounded-lg flex  h-[80px] shadow-electric">
                   <AnimatedBattery />
                 </div>
               </div>
+          </div>
+            <div className="relative">
+                 
+          
+              <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent rounded-2xl" />
               
+              {/* Floating tech indicators */}
+              
+            </div>
               <div className="absolute bottom-4 left-4 animate-bounce-in" style={{animationDelay: '0.5s'}}>
                 <div className="bg-card/90 backdrop-blur-sm rounded-lg p-4">
                   <AnimatedCar />
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </section>
