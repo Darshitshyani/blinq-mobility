@@ -81,7 +81,7 @@ const Topbar = () => {
 					}>Technology</p>
 					<p
 						className="cursor-pointer hover:text-primary-main transition-colors duration-200"
-						onClick={() => router.push("/portfolio")}
+						onClick={() => router.push("/fleets")}
 					>
 						Fleets
 					</p>
@@ -182,7 +182,9 @@ const Topbar = () => {
 
 							<p
 								className="py-4  border-gray-200/50 cursor-pointer hover:text-primary-main transition-colors duration-200"
-								
+								onClick={()=>{
+									router.push("/fleets")
+								}}
 							>
 								Feets
 							</p>
