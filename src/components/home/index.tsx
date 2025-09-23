@@ -3,6 +3,7 @@ import SolvingModule from "./components/SolvingModule";
 import NewsroomHighlights from "./components/NewsroomHighlights";
 import BlogSection from "./components/BlogSection";
 import { InteractiveVideo } from "./components/videosection/InteractiveVideo";
+import VehicleShowcase from "./components/VehicleShowcase";
 
 
 
@@ -12,17 +13,9 @@ const HomePage: React.FC = () => {
    
   <div className="w-full lg:min-h-screen relative ">
     <InteractiveVideo />
-  {/* <video
-    src="city.mp4"
-    autoPlay
-    loop
-    muted
-    className="w-full h-full object-cover"
-  /> */}
-   
-  {/* Black shade on top */}
+
 <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-black/50 to-transparent pointer-events-none" />
-<div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+<div className="absolute bottom-0 left-0 w-full h-[40px] bg-gradient-to-t from-background to-transparent pointer-events-none" />
 
 
 </div>
@@ -58,6 +51,7 @@ const HomePage: React.FC = () => {
  </div>
           <SolvingModule />
           <NewsroomHighlights />
+          <VehicleShowcase />
           <BlogSection />
 
     </>
