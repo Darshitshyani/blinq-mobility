@@ -6,8 +6,6 @@ import AnimatedBattery from "@/components/technology/components/AnimatedBattery"
 import AnimatedCar from "@/components/technology/components/AnimatedCar";
 import SwapAnimation from "@/components/technology/components/SwapAnimation";
 import FeatureIcon from "@/components/technology/components/FeatureIcon";
-
-// Import vehicle images
 import heroCarImage from "@/untils/images/tech/tech page 1st photo car side.jpg";
 import topCoverImage from "@/untils/images/tech/top cover.png";
 import sideRealistic2 from "@/untils/images/tech/side realistic 2.png";
@@ -15,6 +13,7 @@ import sideRealistic3 from "@/untils/images/tech/side realistic 3.png";
 import sideRealistic4 from "@/untils/images/tech/side realistic 4.png";
 import rearViewImage from "@/untils/images/tech/REAR.png";
 import Image from "next/image";
+import CyclingHeroImage from "./CyclingHeroImage";
 
 const Tech = () => {
   const [activeFeature, setActiveFeature] = useState(0);
@@ -171,11 +170,9 @@ const Tech = () => {
           {/* Hero image */}
           <div className={`relative ${heroAnimation.isVisible ? 'animate-scale-in' : 'opacity-0'}`}>
             <div className="relative">
-              <Image 
-                src={heroCarImage} 
-                alt="Blinq Pod Technology" 
-                className="w-full h-auto rounded-2xl shadow-2xl"
-              />
+                 
+            <CyclingHeroImage />
+          
               <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent rounded-2xl" />
               
               {/* Floating tech indicators */}
