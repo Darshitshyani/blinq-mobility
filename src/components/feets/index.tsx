@@ -51,13 +51,7 @@ export const FeetPage = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
 
   return (
     <>
@@ -83,37 +77,8 @@ export const FeetPage = () => {
       </div>
 
       {/* Navigation Arrows */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-2 rounded-full bg-card/20 backdrop-blur-sm border border-border/20 hover:bg-card/40 transition-all duration-300"
-        aria-label="Previous slide"
-      >
-        <ChevronLeft className="w-6 h-6 text-foreground" />
-      </button>
-      
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-2 rounded-full bg-card/20 backdrop-blur-sm border border-border/20 hover:bg-card/40 transition-all duration-300"
-        aria-label="Next slide"
-      >
-        <ChevronRight className="w-6 h-6 text-foreground" />
-      </button>
+   
 
-      {/* Slide Indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex space-x-2">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide
-                ? 'bg-primary shadow-electric'
-                : 'bg-muted hover:bg-muted-foreground/50'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
 
       {/* Hero Content */}
       <div className="relative z-20 text-center max-w-4xl mx-auto px-4">
@@ -127,21 +92,7 @@ export const FeetPage = () => {
           Purpose-built electric fleets that maximize uptime and slash operating costs.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-          <Button 
-            size="lg" 
-            className="bg-gradient-electric text-primary-foreground hover:shadow-electric transition-all duration-300 px-8 py-4 text-lg font-semibold"
-          >
-            Book a Pilot
-          </Button>
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="border-primary/30 text-foreground hover:bg-primary/10 px-8 py-4 text-lg font-semibold"
-          >
-            Calculate Your Savings
-          </Button>
-        </div>
+       
       </div>
       <div className="absolute bottom-0 left-0 w-full h-[40px] bg-gradient-to-t from-card to-transparent pointer-events-none" /> 
     </section>

@@ -5,10 +5,21 @@ import Tech from "./components/Tech";
 const TechPage = () => {
   return (
     <div className="min-h-screen">
-
-
-      {/* Hero Section */}
-      <div className="flex min-h-screen items-center justify-center pt-20 ">
+       <div className="video-container relative bg-card  h-full overflow-hidden shadow-2xl">
+      <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-black/50 to-transparent pointer-events-none" />
+<div className="absolute bottom-0 left-0 w-full h-[40px] bg-gradient-to-t from-background to-transparent pointer-events-none" />
+        <video
+  
+  className="w-full h-auto object-cover"
+  src="Battery.mp4"
+  autoPlay
+  loop
+  muted
+  playsInline
+  preload="metadata"
+/>
+</div>
+      {/* <div className="flex min-h-screen items-center justify-center pt-20 ">
         <div className="text-center space-y-8 container mx-auto px-6">
           <div className="space-y-4">
             <h1 className="text-6xl lg:text-8xl font-black">
@@ -23,7 +34,7 @@ const TechPage = () => {
             </p>
           </div>
 
-          {/* Quick Stats */}
+        
           <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <Card className="p-6 bg-card-gradient border-electric-blue/20 shadow-electric">
               <div className="text-2xl font-black text-electric-blue mb-2">5 min</div>
@@ -43,7 +54,7 @@ const TechPage = () => {
             </Card>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Floating animation elements */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">

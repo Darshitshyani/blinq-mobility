@@ -6,12 +6,13 @@ import AnimatedBattery from "@/components/technology/components/AnimatedBattery"
 import AnimatedCar from "@/components/technology/components/AnimatedCar";
 import SwapAnimation from "@/components/technology/components/SwapAnimation";
 import FeatureIcon from "@/components/technology/components/FeatureIcon";
-import heroCarImage from "@/untils/images/tech/tech page 1st photo car side.jpg";
-import topCoverImage from "@/untils/images/tech/top cover.png";
+import design from "@/untils/images/tech/Sleek and Elegant design.png";
+import cabin from "@/untils/images/tech/Spacious Cabin.png";
 import sideRealistic2 from "@/untils/images/tech/side realistic 2.png";
-import sideRealistic3 from "@/untils/images/tech/side realistic 3.png";
-import sideRealistic4 from "@/untils/images/tech/side realistic 4.png";
-import rearViewImage from "@/untils/images/tech/REAR.png";
+import chassis from "@/untils/images/tech/Space frame chassis.jpg";
+import braking from "@/untils/images/tech/Advanced Braking.jpeg";
+import maneuver from "@/untils/images/tech/Easy maneuverability .png";
+import composive from "@/untils/images/tech/Sleek Design.jpeg";
 import Image from "next/image";
 
 const Tech = () => {
@@ -62,49 +63,49 @@ const Tech = () => {
       id: 'platform',
       title: 'Skateboard Platform',
       description: 'Flat, modular base enabling multiple vehicle form factors and low center of gravity.',
-      image: sideRealistic4
+      image: sideRealistic2
     },
     {
       id: 'chassis',
       title: 'Space Frame Chassis',
       description: 'Lightweight yet rigid structure ensuring safety and durability.',
-      image: sideRealistic3
+      image: chassis
     },
     {
       id: 'design',
       title: 'Sleek & Elegant Design',
       description: 'Aerodynamic form optimized for urban commute.',
-      image: heroCarImage
+      image: design
     },
     {
       id: 'cabin',
       title: 'Spacious Cabin',
       description: 'Comfortable seating for 4 adults with extra legroom.',
-      image: topCoverImage
+      image: cabin
     },
     {
       id: 'composite',
       title: 'Composite Body',
       description: 'Thermoplastic composites for strength, lightweighting, and easy manufacturing.',
-      image: sideRealistic2
+      image: composive
     },
     {
       id: 'maneuver',
       title: 'Compact Maneuverability',
       description: 'Effortless navigation in narrow streets and traffic.',
-      image: rearViewImage
+      image: maneuver
     },
     {
       id: 'ai',
       title: 'AI-Enabled Features',
       description: 'Driver drowsiness detection, predictive maintenance, and smart alerts.',
-      image: topCoverImage
+      image: sideRealistic2
     },
     {
       id: 'braking',
       title: 'Advanced Braking',
       description: 'Regenerative braking, ABS, and hill assist for safety.',
-      image: sideRealistic4
+      image: braking
     }
   ];
 

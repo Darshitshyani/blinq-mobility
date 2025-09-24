@@ -6,12 +6,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/shared/Ca
 import { Calculator, TrendingUp, Leaf } from 'lucide-react';
 
 export const CalculatorSection = () => {
-  const [fleetSize, setFleetSize] = useState(10);
+  const [fleetSize, setFleetSize] = useState(1);
   const [dailyKm, setDailyKm] = useState(200);
   const [fuelPrice, setFuelPrice] = useState(100);
 
   // Calculation formulas
-  const blinqCostPerKm = 4;
+  const blinqCostPerKm = 1.5;
   const iceCostPerKm = 10;
   const co2SavedPerKm = 0.15; // tonnes
 
@@ -81,7 +81,7 @@ export const CalculatorSection = () => {
                 />
               </div>
 
-              <div className="space-y-2">
+              {/* <div className="space-y-2">
                 <Label htmlFor="fuel-price" className="text-foreground font-medium">
                   Current Fuel Price (₹/L)
                 </Label>
@@ -94,16 +94,16 @@ export const CalculatorSection = () => {
                   min="50"
                   max="200"
                 />
-              </div>
+              </div> */}
 
               {/* Cost Comparison */}
-              <div className="grid grid-cols-2 gap-4 pt-4">
-                <div className="text-center p-4 bg-danger/5 backdrop-blur-sm rounded-xl border border-danger/20 hover:bg-danger/10 hover:border-danger/30 transition-all duration-300">
+              <div className=" gap-4 pt-4 w-full">
+                {/* <div className="text-center p-4 bg-danger/5 backdrop-blur-sm rounded-xl border border-danger/20 hover:bg-danger/10 hover:border-danger/30 transition-all duration-300">
                   <div className="text-2xl font-bold text-danger">₹{iceCostPerKm}</div>
                   <div className="text-sm text-muted-foreground">ICE Cost/km</div>
-                </div>
-                <div className="text-center p-4 bg-success/5 backdrop-blur-sm rounded-xl border border-success/20 hover:bg-success/10 hover:border-success/30 transition-all duration-300">
-                  <div className="text-2xl font-bold text-success">₹{blinqCostPerKm}</div>
+                </div> */}
+                <div className="text-center p-4 bg-success/5 backdrop-blur-sm rounded-xl border border-success/20 hover:bg-success/10 hover:border-success/30 w-full transition-all duration-300">
+                  <div className="text-2xl font-bold text-success">1.5₹</div>
                   <div className="text-sm text-muted-foreground">Blinq Cost/km</div>
                 </div>
               </div>
