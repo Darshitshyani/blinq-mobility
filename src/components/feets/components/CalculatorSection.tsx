@@ -12,7 +12,7 @@ export const CalculatorSection = () => {
 
   // Calculation formulas
   const blinqCostPerKm = 1.5;
-  const iceCostPerKm = 10;
+  const iceCostPerKm = 4;
   const co2SavedPerKm = 0.15; // tonnes
 
   const totalKmPerYear = fleetSize * dailyKm * 365;
@@ -28,7 +28,7 @@ export const CalculatorSection = () => {
   };
 
   return (
-    <section className="py-20 px-4 bg-card">
+    <section className="py-20 px-4 bg-card" id='calc'>
       
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">

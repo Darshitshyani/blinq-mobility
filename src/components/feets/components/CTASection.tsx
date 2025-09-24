@@ -2,8 +2,10 @@ import { Button } from '@/components/shared/Button';
 import { ArrowRight, Calendar, Calculator } from 'lucide-react';
 import fleetMountains from '@/untils/images/fleet/flt6.png';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 export const CTASection = () => {
+  const router = useRouter()
   return (
     <section className="relative py-20 px-4 overflow-hidden">
       {/* Background Image */}
@@ -27,10 +29,10 @@ export const CTASection = () => {
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+        <div className="flex flex-col  sm:flex-row gap-6 justify-center mb-16">
           <Button 
             size="lg" 
-            className="group bg-gradient-electric text-primary-foreground hover:shadow-electric transition-all duration-300 px-8 py-6 text-lg font-semibold"
+            className="group  bg-background border border-primary/50  text-primary-white hover:shadow-electric transition-all duration-300 px-8 py-6 text-lg font-semibold"
           >
             <Calendar className="w-5 h-5 mr-2 group-hover:animate-glow-pulse" />
             Book a Pilot
@@ -39,9 +41,10 @@ export const CTASection = () => {
           <Button 
             variant="outline" 
             size="lg"
+            onClick={()=>{router.push("#calc")}}
             className="group border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary/50 px-8 py-6 text-lg font-semibold"
           >
-            <Calculator className="w-5 h-5 mr-2 group-hover:animate-glow-pulse" />
+            <Calculator className="w-5 h-5 mr-2 group-hover:animate-glow-pulse hover:text-white" />
             Calculate Your Savings
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
           </Button>

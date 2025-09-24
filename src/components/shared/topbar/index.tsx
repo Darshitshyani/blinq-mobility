@@ -68,7 +68,7 @@ const Topbar = () => {
 							if (el) {
 								el.scrollIntoView({ behavior: "smooth" });
 							} else {
-								router.push("/#who");
+								router.push("/");
 							}
 						}}
 					>
