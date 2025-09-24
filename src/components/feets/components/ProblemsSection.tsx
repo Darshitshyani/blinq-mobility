@@ -27,6 +27,7 @@ const problems = [
 export const ProblemsSection = () => {
   return (
     <section className="py-20 px-4 bg-card">
+            <div className="absolute bottom-0 left-0 w-full h-[40px] bg-gradient-to-t from-card to-transparent pointer-events-none" />
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">

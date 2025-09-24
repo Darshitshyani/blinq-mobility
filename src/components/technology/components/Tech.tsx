@@ -13,7 +13,6 @@ import sideRealistic3 from "@/untils/images/tech/side realistic 3.png";
 import sideRealistic4 from "@/untils/images/tech/side realistic 4.png";
 import rearViewImage from "@/untils/images/tech/REAR.png";
 import Image from "next/image";
-import CyclingHeroImage from "./CyclingHeroImage";
 
 const Tech = () => {
   const [activeFeature, setActiveFeature] = useState(0);
@@ -170,7 +169,15 @@ const Tech = () => {
           {/* Hero image */}
           <div className={`relative ${heroAnimation.isVisible ? 'animate-scale-in' : 'opacity-0'}`}>
            <div className={`relative ${heroAnimation.isVisible ? 'animate-scale-in' : 'opacity-0'}`}>
-            <CyclingHeroImage />
+            <video
+  className="w-full h-auto rounded-xl object-cover"
+  src="360video.mp4"
+  autoPlay
+  loop
+  muted
+  playsInline
+  preload="metadata"
+/>
               <div className="absolute top-4 right-4 animate-bounce-in h-fit">
                 <div className="bg-card/90 backdrop-blur-sm rounded-lg flex  h-[80px] shadow-electric">
                   <AnimatedBattery />

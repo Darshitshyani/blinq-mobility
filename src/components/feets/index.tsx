@@ -62,6 +62,7 @@ export const FeetPage = () => {
   return (
     <>
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      
       {/* Background Slider */}
       <div className="absolute inset-0 z-0">
         {slides.map((slide, index) => (
@@ -142,6 +143,7 @@ export const FeetPage = () => {
           </Button>
         </div>
       </div>
+      <div className="absolute bottom-0 left-0 w-full h-[40px] bg-gradient-to-t from-card to-transparent pointer-events-none" /> 
     </section>
      <ProblemsSection />
       <AdvantagesSection />

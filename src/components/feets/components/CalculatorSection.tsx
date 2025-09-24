@@ -29,6 +29,7 @@ export const CalculatorSection = () => {
 
   return (
     <section className="py-20 px-4 bg-card">
+      
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 px-6 py-3  rounded-full border border-primary/30 bg-primary/10 backdrop-blur-md text-foreground font-semibold mb-6 shadow-lg hover:bg-primary/15 hover:border-primary/40 transition-all duration-300">
