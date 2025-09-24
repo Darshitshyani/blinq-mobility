@@ -18,6 +18,7 @@ import teamWorkspace from '@/untils/images/WhatsApp Image 2025-05-15 at 13.41.09
 import nexusAlumni from '@/untils/images/grp .jpg';
 import formulaTeam from '@/untils/images/whatsapp-image-2025-01-13-at-193205-56e41b1b.jpg';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 const boardMembers = [
   { name: 'Nikesh', image: nikeshImg, role: 'CEO', department: 'Business', fullTitle: 'Director/Co-Founder' },
@@ -35,6 +36,7 @@ const coreTeam = [
 ];
 
 const About = () => {
+  const router = useRouter()
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -337,7 +339,9 @@ const About = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             
-            <button className="px-8 py-4 bg-secondary text-secondary-foreground font-semibold rounded-lg hover:bg-secondary/80 transition-colors">
+            <button onClick={()=>{
+              router.push("https://www.notion.so/Blinq-Build-the-Future-of-Mobility-With-Us-27853783cf5b807e90f9c9524c5393c6?source=copy_link")
+            }} className="px-8 py-4 bg-secondary text-secondary-foreground font-semibold rounded-lg hover:bg-secondary/80 transition-colors">
              Careers
             </button>
           </div>
