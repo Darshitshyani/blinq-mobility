@@ -24,7 +24,7 @@ const router = useRouter()
 
   return (
    <div
-  className={`popup absolute z-20 p-4 rounded-xl flex justify-center items-center w-fit  border border-white/20 shadow-xl 
+  className={`popup absolute z-20 p-2 md:p-4 rounded-xl flex justify-center items-center w-fit  border border-white/20 shadow-xl 
     bg-white/10 backdrop-blur-md backdrop-saturate-150
     ${isVisible ? 'popup-enter-active' : 'popup-enter'}`}
   style={{
@@ -38,7 +38,7 @@ const router = useRouter()
   onMouseEnter={onMouseEnter}
   onMouseLeave={onMouseLeave}
 >
-  <p className='text-foreground text-lg cursor-pointer z-[1000] hover:text-' onClick={()=>{
+  <p className='text-foreground text-md md:text-lg cursor-pointer z-[1000] hover:text-' onClick={()=>{
 router.push(hotspot.links)
   }}>{hotspot.title}</p>
   <KeyboardArrowRightIcon />

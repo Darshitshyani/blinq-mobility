@@ -15,7 +15,7 @@ const DEFAULT_HOTSPOTS: Hotspot[] = [
     x: 35,
     y: 15,
     title: 'Home',
-    links:"/home",
+    links:"/",
   },
   {
     id: 'Technology',
@@ -92,10 +92,10 @@ export const InteractiveVideo = () => {
     
 
       {/* Video Container */}
-      <div className="video-container relative bg-card  overflow-hidden shadow-2xl">
+      <div className="video-container relative bg-card h-[65vh] md:h-screen overflow-hidden shadow-2xl">
        <video
   ref={videoRef}
-  className="w-full h-auto object-cover"
+  className="w-full h-full object-cover"
   src="city.mp4"
   autoPlay
   loop
