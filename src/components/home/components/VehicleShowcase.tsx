@@ -3,7 +3,7 @@ import { ArrowRight, MapPin, Zap, Shield ,Leaf, Recycle, Sun, TreePine, Clock} f
 import home1 from "@/untils/images/home1.jpeg";
 import home2 from "@/untils/images/home2.jpeg";
 import home3 from "@/untils/images/home3.jpeg";
-import home4 from "@/untils/images/home3.jpeg";
+import home4 from "@/untils/images/home4.jpeg";
 import Image from "next/image";
 import { useRouter } from "next/router";
 

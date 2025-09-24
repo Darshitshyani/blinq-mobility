@@ -8,7 +8,7 @@ import { Calculator, TrendingUp, Leaf } from 'lucide-react';
 export const CalculatorSection = () => {
   const [fleetSize, setFleetSize] = useState(1);
   const [dailyKm, setDailyKm] = useState(200);
-  const [fuelPrice, setFuelPrice] = useState(100);
+
 
   // Calculation formulas
   const blinqCostPerKm = 1.5;
