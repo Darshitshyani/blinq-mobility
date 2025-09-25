@@ -252,9 +252,9 @@ const router =useRouter()
       {/* Header */}
    
       {/* Hero Section */}
-      <div className="relative">
+      <div className="relative h-[60vh] ">
 <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-black/50 to-transparent pointer-events-none" />
-        <div className="aspect-[21/9] overflow-hidden">
+        <div className="aspect-[21/9] md:aspect-[21/9] overflow-hidden h-full w-full">
           <Image 
             src={currentPost?.image} 
             alt={currentPost?.title}
@@ -268,7 +268,7 @@ const router =useRouter()
             <Badge variant="secondary" className="bg-electric-blue text-white mb-4">
               {currentPost?.category}
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
+            <h1 className="text-xl md:text-6xl font-bold text-white md:mb-6 leading-tight">
               {currentPost?.title}
             </h1>
           </div>
