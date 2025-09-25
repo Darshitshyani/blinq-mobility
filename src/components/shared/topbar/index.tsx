@@ -31,8 +31,12 @@ const Topbar = () => {
   };
 
   // Helper: check if current path matches
-  const isActive = (path: string) => router.pathname === path;
-
+const isActive = (path: string) => {
+  if (path === "/blogs") {
+    return router.pathname.startsWith("/blogs");
+  }
+  return router.pathname === path;
+};
   return (
     <>
       <div
@@ -84,6 +88,16 @@ const Topbar = () => {
             onClick={() => router.push("/fleets")}
           >
             Fleets
+          </p>
+           <p
+            className={`cursor-pointer transition-colors duration-200 ${
+              isActive("/blogs")
+                ? "text-primary font-semibold"
+                : "hover:text-primary-main"
+            }`}
+            onClick={() => router.push("/blogs/iitstartupindia-cohort-12")}
+          >
+            Blogs
           </p>
 
           <p
@@ -192,6 +206,19 @@ const Topbar = () => {
                 }}
               >
                 Fleets
+              </div>
+                 <div
+                className={`py-4 cursor-pointer ${
+                  isActive("/blogs")
+                    ? "text-primary-main font-bold"
+                    : "hover:text-primary-main"
+                }`}
+                onClick={() => {
+                  router.push("/blogs/iitstartupindia-cohort-12");
+                  handleSidebarClose();
+                }}
+              >
+                Blogs
               </div>
 
               <div

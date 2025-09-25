@@ -1,6 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/shared/Card";
 import { Button } from "@/components/shared/Button";
 import { ArrowRight, Calendar, User } from "lucide-react";
+import blog1 from "@/untils/images/blog/blog1.jpg"
+import blog2 from "@/untils/images/blog/blog2.webp"
+import blog3 from "@/untils/images/blog/blog3.png"
+import blog4 from "@/untils/images/blog/blog4.jpg"
+import Image from "next/image";
 
 const BlogSection = () => {
   const blogs = [
@@ -10,8 +15,8 @@ const BlogSection = () => {
       description: "Blinq Mobility selected for prestigious IIT Startup India Cohort 12, marking a significant milestone in our journey to revolutionize urban mobility.",
       date: "2024",
       author: "Blinq Team",
-      image: "https://static.wixstatic.com/media/aed8e1_d765d71a91034fb98c8f408a62e8808c~mv2.jpg",
-      url: "https://www.blinqmobility.com/post/iitstartupindia-cohort-12",
+      image: blog1,
+      url: "/blogs/iitstartupindia-cohort-12",
       category: "Achievement"
     },
     {
@@ -20,8 +25,8 @@ const BlogSection = () => {
       description: "From Formula Student to revolutionary electric pods - discover how IIT Delhi graduate Ankit Kumar is transforming urban transport with purpose-built vehicles.",
       date: "2024",
       author: "Ankit Kumar",
-      image: "https://static.wixstatic.com/media/aed8e1_207ed9e8f66143fc808b760625712388~mv2.webp",
-      url: "https://www.blinqmobility.com/post/driving-change-in-urban-mobility-the-blinq-mobility-journey",
+      image: blog2,
+      url: "/blogs/driving-change-in-urban-mobility",
       category: "Founder Story"
     },
     {
@@ -30,8 +35,8 @@ const BlogSection = () => {
       description: "Two trailblazing women entrepreneurs transforming urban mobility with electric pods that promise smarter, sustainable, and efficient transportation solutions.",
       date: "2024",
       author: "Blinq Team",
-      image: "https://static.wixstatic.com/media/aed8e1_e733c854afee4bc181b8a063f7fa2e48~mv2.png",
-      url: "https://www.blinqmobility.com/post/meet-abhilasha-sushmita-innovators-behind-blinq-mobility",
+      image: blog3,
+      url: "/blogs/meet-abhilasha-sushmita",
       category: "Team Spotlight"
     },
     {
@@ -40,8 +45,8 @@ const BlogSection = () => {
       description: "Exploring how the shift to electric vehicles is transforming India's ride-hailing industry and creating new opportunities for sustainable transportation.",
       date: "2024",
       author: "Blinq Research",
-      image: "https://static.wixstatic.com/media/aed8e1_61b42c4338954ea6ae079094e9165cef~mv2.jpg",
-      url: "https://www.blinqmobility.com/post/how-energy-transition-is-disrupting-the-ride-hailing-market",
+      image: blog4,
+      url: "/blogs/energy-transition-ride-hailing",
       category: "Industry Insights"
     }
   ];
@@ -69,7 +74,7 @@ const BlogSection = () => {
           {blogs.map((blog) => (
             <Card key={blog.id} className="group rounded-2xl hover:shadow-electric transition-all duration-500 border-border/50 bg-card/50 backdrop-blur shadow-[0_0_30px_rgba(59,166,255,0.3)]">
               <div className="relative overflow-hidden">
-                <img 
+                <Image 
                   src={blog.image} 
                   alt={blog.title}
                   className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
