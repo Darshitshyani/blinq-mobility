@@ -120,12 +120,9 @@ const isActive = (path: string) => {
              text-white shadow-lg
              hover:bg-white/20 transition-colors duration-300"
             onClick={() => {
-              const el = document.getElementById("contact");
-              if (el) {
-                el.scrollIntoView({ behavior: "smooth" });
-              } else {
-                router.push("/#contact");
-              }
+              
+                router.push("/contact-us");
+              
             }}
           >
             Contact us
