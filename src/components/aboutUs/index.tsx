@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from '@/components/shared/Card';
 import { Badge } from '@/components/shared/Badge';
-import { Zap, Target, Eye, Users, Award, Car } from 'lucide-react';
+import { Zap, Target, Eye, Users, Award, Car, Linkedin } from 'lucide-react';
 
 import abhilashaImage from '@/untils/images/Abhilasha.jpg';
 import gp4 from "@/untils/images/gp4.jpg"
@@ -21,20 +21,19 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 const boardMembers = [
-  { name: 'Nikesh', image: nikeshImg, role: 'CEO', department: 'Business', fullTitle: 'Director/Co-Founder' },
-  { name: 'Sushmita', image: sushmitaImg, role: 'Director', department: 'Business', fullTitle: 'Director/Co-Founder' },
-  { name: 'Ankit', image: ankitImg, role: 'CTO(M)', department: 'Technical', fullTitle: 'Director/Co-Founder' },
-  { name: 'Abhilasha', image: abhilashaImage, role: 'CTO(E)', department: 'Technical', fullTitle: 'Director/Co-Founder' },
+  { name: 'Nikesh', image: nikeshImg, role: 'CEO', department: 'Business', fullTitle: 'Director/Co-Founder', linkedin: 'https://www.linkedin.com/in/nikeshbisht/' },
+  { name: 'Sushmita', image: sushmitaImg, role: 'Founder', department: 'Business', fullTitle: 'Director/Co-Founder', linkedin: 'https://www.linkedin.com/in/sushmita-patil-687404219/' },
+  { name: 'Ankit', image: ankitImg, role: 'CTO(M)', department: 'Technical', fullTitle: 'Director/Co-Founder', linkedin: 'https://www.linkedin.com/in/ankit-kumar-119396208/' },
+  { name: 'Abhilasha', image: abhilashaImage, role: 'CTO(E)', department: 'Technical', fullTitle: 'Director/Co-Founder', linkedin: 'https://www.linkedin.com/in/abhilasha-marmat/' },
 ];
 
 const coreTeam = [
-  { name: 'Manasi', image: manasiImg, role: 'Business & Strategy', department: 'Business', fullTitle: "Founder's Office" },
-  { name: 'Pritish', image: pritishImg, role: 'Automotive Designer', department: 'Technical', fullTitle: 'Design Lead' },
-  { name: 'Ritik', image: ritikImg, role: 'Founding Engineer', department: 'Technical', fullTitle: 'Mechanical Systems' },
-  { name: 'Soham', image: sohamImg, role: 'Firmware Engineer', department: 'Technical', fullTitle: 'Electronics Systems' },
-  { name: 'Ajeet', image: ajeetImg, role: 'Technical Associate', department: 'Technical', fullTitle: 'Engineering Support' },
+  { name: 'Manasi', image: manasiImg, role: 'Business & Strategy', department: 'Business', fullTitle: "Founder's Office", linkedin: 'https://www.linkedin.com/in/manasi-korade-1949611a4/' },
+  { name: 'Pritish', image: pritishImg, role: 'Automotive Designer', department: 'Technical', fullTitle: 'Design Lead', linkedin: 'https://www.linkedin.com/in/pritish-karmi-91124717b/' },
+  { name: 'Ritik', image: ritikImg, role: 'Founding Engineer', department: 'Technical', fullTitle: 'Mechanical Systems', linkedin: 'https://www.linkedin.com/in/ritwik-mukherjee1/' },
+  { name: 'Soham', image: sohamImg, role: 'Firmware Engineer', department: 'Technical', fullTitle: 'Electronics Systems', linkedin: 'https://www.linkedin.com/in/soham-patil-660621225/' },
+  { name: 'Ajeet', image: ajeetImg, role: 'Technical Associate', department: 'Technical', fullTitle: 'Engineering Support', linkedin: 'https://www.linkedin.com/in/ajeet-jangid-33b2bb1a5/' },
 ];
-
 const About = () => {
   const router = useRouter()
   return (
@@ -215,7 +214,7 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-   <section className="py-20 px-6">
+  <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-electric-purple/20 text-electric-purple border-electric-purple/30">
@@ -247,10 +246,7 @@ const About = () => {
                 {boardMembers.map((member, index) => (
                   <Card 
                     key={member.name}
-                    className={`p-6 bg-card-gradient border-2 hover:shadow-electric transition-all duration-300 group
-                    border-electric-cyan/30 hover:border-electric-cyan/60 
-                      
-                    `}
+                    className="p-6 bg-card-gradient border-2 border-electric-blue/30 hover:border-electric-blue/60 hover:shadow-electric transition-all duration-300 group"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="relative mb-4">
@@ -259,17 +255,23 @@ const About = () => {
                         alt={member.name}
                         className="w-full aspect-square object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                       />
-                      <div className={`absolute -top-2 -right-2 w-6 h-6 rounded-full bg-electric-cyan
-                       flex items-center justify-center`}>
+                      <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-electric-blue flex items-center justify-center">
                         <div className="w-2 h-2 bg-background rounded-full"></div>
                       </div>
                     </div>
                     
                     <div className="text-center">
                       <h3 className="font-semibold text-lg mb-1">{member.name}</h3>
-                      <p className="text-sm font-medium mb-1 text-primary">{member.role}</p>
-                      <p className="text-xs text-muted-foreground">{member.fullTitle}</p>
-                    
+                      <p className="text-sm font-medium mb-1 text-electric-blue">{member.role}</p>
+                      <p className="text-xs text-muted-foreground mb-4">{member.fullTitle}</p>
+                      <a 
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center w-10 h-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-full hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-lg"
+                      >
+                        <Linkedin className="w-4 h-4 text-electric-blue" />
+                      </a>
                     </div>
                   </Card>
                 ))}
@@ -299,9 +301,7 @@ const About = () => {
                 {coreTeam.map((member, index) => (
                   <Card 
                     key={member.name}
-                    className={`p-6 bg-card-gradient border hover:shadow-electric transition-all duration-300 group 
-                    border-electric-cyan/20 hover:border-electric-cyan/40 `}
-                    
+                    className="p-6 bg-card-gradient border border-electric-blue/20 hover:border-electric-blue/40 hover:shadow-electric transition-all duration-300 group"
                     style={{ animationDelay: `${(index + 4) * 0.1}s` }}
                   >
                     <div className="relative mb-4">
@@ -310,13 +310,21 @@ const About = () => {
                         alt={member.name}
                         className="w-full aspect-square object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                       />
-                      <div className={`absolute -top-1 -right-1 w-4 h-4 rounded-full bg-electric-cyan/60`}></div>
+                      <div className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-electric-blue/60"></div>
                     </div>
                     
                     <div className="text-center">
                       <h3 className="font-semibold text-base mb-1">{member.name}</h3>
-                      <p className="text-sm font-medium mb-1 text-primary">{member.role}</p>
-                      <p className="text-xs text-muted-foreground">{member.fullTitle}</p>
+                      <p className="text-sm font-medium mb-1 text-electric-blue">{member.role}</p>
+                      <p className="text-xs text-muted-foreground mb-4">{member.fullTitle}</p>
+                      <a 
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center w-9 h-9 bg-white/10 backdrop-blur-md border border-white/20 rounded-full hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-lg"
+                      >
+                        <Linkedin className="w-4 h-4 text-electric-blue" />
+                      </a>
                     </div>
                   </Card>
                 ))}
