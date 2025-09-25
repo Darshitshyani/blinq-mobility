@@ -9,9 +9,9 @@ import FeatureIcon from "@/components/technology/components/FeatureIcon";
 import design from "@/untils/images/tech/Sleek and Elegant design.png";
 import cabin from "@/untils/images/tech/Spacious Cabin.png";
 import sideRealistic2 from "@/untils/images/tech/side realistic 2.png";
-import chassis from "@/untils/images/tech/Space frame chassis.jpg";
+import chassis from "@/untils/images/tech/spaceframe.png";
 import braking from "@/untils/images/tech/Advanced Braking.jpeg";
-import maneuver from "@/untils/images/tech/Easy maneuverability .png";
+import maneuver from "@/untils/images/tech/Compact Manuoverability.png";
 import composive from "@/untils/images/tech/Sleek Design.jpeg";
 import Image from "next/image";
 
