@@ -239,12 +239,9 @@ const isActive = (path: string) => {
                     : "hover:text-primary-main"
                 }`}
                 onClick={() => {
-                  const el = document.getElementById("contact");
-                  if (el) {
-                    el.scrollIntoView({ behavior: "smooth" });
-                  } else {
-                    router.push("/#contact");
-                  }
+               
+                    router.push("/contact-us");
+                  
                   handleSidebarClose();
                 }}
               >
