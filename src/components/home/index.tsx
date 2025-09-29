@@ -14,7 +14,7 @@ const HomePage: React.FC = () => {
   <div className="w-full lg:min-h-screen relative ">
     <InteractiveVideo />
 
-<div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-black/50 to-transparent pointer-events-none" />
+<div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-black/10 to-transparent pointer-events-none" />
 <div className="absolute bottom-0 left-0 w-full h-[40px] bg-gradient-to-t from-background to-transparent pointer-events-none" />
 
 
@@ -32,26 +32,20 @@ const HomePage: React.FC = () => {
 
   </div>
                 <div className="flex flex-col md:flex-row gap-6 mt-[50px] w-full h-full px-4 sm:px-6 lg:px-8 justify-center items-center">
-            <div className="bg-card-gradient border border-border rounded-xl p-6 shadow-accent w-[350px] h-[210px]">
+            <div className="bg-card-gradient border border-border rounded-xl p-6 shadow-accent w-[350px] ">
               <h3 className="text-xl font-semibold text-primary mb-3">Our Mission</h3>
               <p className="text-muted-foreground">
-                Make EVs the default choice of commute for the masses by overcoming range anxiety, 
-                charging downtime, and high upfront costs.
+               Our Mission Make EVs the default choice of commute for the masses by overcoming range anxiety, charging downtime, and high upfront costs and making them better than ICE Vehicles in every way.
+
               </p>
             </div>
-            <div className="bg-card-gradient border border-border rounded-xl p-6 shadow-accent h-[210px] w-[350px]">
-              <h3 className="text-xl font-semibold text-accent mb-3">Our Vision</h3>
-              <p className="text-muted-foreground">
-                Build a seamless zero-emission ecosystem combining purpose-built vehicles, 
-                AI-driven battery swapping, and microfactories for sustainable mobility.
-              </p>
-            </div>
+           
           </div>
       
  </div>
           <SolvingModule />
           <NewsroomHighlights />
-          <VehicleShowcase />
+          {/* <VehicleShowcase /> */}
           <BlogSection />
 
     </>

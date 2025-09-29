@@ -4,11 +4,14 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
 import CloseIcon from "@mui/icons-material/Close";
 import { useRouter } from "next/router";
+import CustomPopover from "../CustomPopover";
+import { ArrowDropDown, ArrowDropUp, ArrowRight } from "@mui/icons-material";
 
 const Topbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [openDrop, setOpenDrop] = useState(false);
 
   const router = useRouter();
 
@@ -68,7 +71,7 @@ const isActive = (path: string) => {
             Home
           </p>
 
-          <p
+          {/* <p
             className={`cursor-pointer transition-colors duration-200 ${
               isActive("/technology")
                 ? "text-primary font-semibold"
@@ -77,7 +80,29 @@ const isActive = (path: string) => {
             onClick={() => router.push("/technology")}
           >
             Technology
-          </p>
+          </p> */}
+          	<div
+						className={`flex items-center justify-center gap-1 hover:text-primary-main transition-colors duration-200 ${
+							openDrop && "text-primary-main"
+						}`}
+					>
+						<CustomPopover
+							isOpen={openDrop}
+							handleClose={(event) => setOpenDrop(event)}
+							buttonTitleLabel="Technology"
+							children={
+								<div className="flex flex-col absolute rounded-xl gap-3 p-5  border-white/20 shadow-xl 
+    bg-white/40 backdrop-blur-md backdrop-saturate-150 border  text-common-black mt-[20px] min-w-[250px]">
+								<p className="cursor-pointer hover:text-primary"   onClick={() => {router.push("/technology")
+                  setOpenDrop(false)  
+                }
+                
+                }>Vehicles and swapping</p>
+								</div>
+							}
+						/>
+						{openDrop ? <ArrowDropUp /> : <ArrowDropDown />}
+					</div>
 
           <p
             className={`cursor-pointer transition-colors duration-200 ${
@@ -100,6 +125,7 @@ const isActive = (path: string) => {
             Blogs
           </p>
 
+
           <p
             className={`cursor-pointer transition-colors duration-200 ${
               isActive("/about-us")
@@ -110,24 +136,19 @@ const isActive = (path: string) => {
           >
             About Us
           </p>
+          <p
+            className={`cursor-pointer transition-colors duration-200 ${
+              isActive("/contect-us")
+                ? "text-primary font-semibold"
+                : "hover:text-primary-main"
+            }`}
+            onClick={() => router.push("/contact-us")}
+          >
+            contact Us
+          </p>
         </div>
 
-        <div>
-          <button
-            className="w-[160px] rounded-lg hidden md:hidden lg:flex xl:flex 
-             bg-white/10 backdrop-blur-md border border-white/20 
-             py-3 px-3 flex items-center justify-center 
-             text-white shadow-lg
-             hover:bg-white/20 transition-colors duration-300"
-            onClick={() => {
-              
-                router.push("/contact-us");
-              
-            }}
-          >
-            Contact us
-          </button>
-        </div>
+     
 
         {/* Mobile Menu Button */}
         <div

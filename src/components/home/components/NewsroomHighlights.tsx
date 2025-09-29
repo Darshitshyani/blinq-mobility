@@ -75,22 +75,22 @@ const highlights = [
 
 export default function NewsroomHighlights() {
   return (
-    <div className="lg:min-h-screen bg-background py-16 px-4">
+    <div className="lg:min-h-screen bg-background py-16 px-4 flex items-center justify-center">
       <div className="container mx-auto max-w-7xl">
         {/* Header Section */}
         <div className="text-center mb-16 animate-fade-in">
-          <Badge variant="secondary" className="mb-4 px-4 py-2 text-sm font-medium bg-primary/10 text-primary border-primary/20">
+          {/* <Badge variant="secondary" className="mb-4 px-4 py-2 text-sm font-medium bg-primary/10 text-primary border-primary/20">
             Innovation Ecosystem
-          </Badge>
+          </Badge> */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="text-gradient">Newsroom</span>
+            <span className="text-gradient">Supported by </span>
             <br />
-            <span className="text-foreground">& Highlights</span>
+          
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          {/* <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Showcasing our journey through partnerships, recognitions, and innovations in sustainable mobility, 
             energy transition, and urban transportation solutions.
-          </p>
+          </p> */}
         </div>
 
  {/* <div className="mt-20 grid grid-cols-2 mt-[80px] md:grid-cols-4 gap-8 animate-fade-in" style={{ animationDelay: "800ms" }}>
@@ -145,31 +145,22 @@ export default function NewsroomHighlights() {
           >
             {highlights.map((highlight, index) => (
               <div key={index} className="px-4">
-                <Card
-                  className="gradient-border shadow-enhanced backdrop-blur-sm transition-all duration-500 animate-fade-in animate-bounce-gentle"
-                  style={{ 
-                    animationDelay: `${highlight.delay}ms`,
-                    animationDuration: `${2 + index * 0.3}s`
-                  }}
-                >
-                  <div className="relative p-4 text-center bg-card-gradient rounded-lg">
+               
+                 
                     {/* Logo */}
                     <div className="flex justify-center mb-3">
-                      <div className="relative bg-background/80 backdrop-blur-sm rounded-xl p-4 shadow-lg transition-all duration-300">
+                     
                         <Image
                           src={highlight.image as any}
                           alt={highlight.title}
-                          className="h-16 w-20 object-contain filter transition-all duration-300"
+                          className="w-[200px] rounded object-contain filter transition-all duration-300"
                         />
-                      </div>
+
                     </div>
 
-                    {/* Title */}
-                    <h3 className="text-xs font-medium text-foreground transition-all duration-300 leading-tight">
-                      {highlight.title}
-                    </h3>
-                  </div>
-                </Card>
+                    
+                  
+               
               </div>
             ))}
           </Slider>

@@ -514,3 +514,17 @@
     box-shadow: var(--glow-accent);
   }
 }
+.video-container {
+  position: relative;
+}
+
+.video-container video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.hotspot {
+  position: absolute;
+  pointer-events: auto;
+}

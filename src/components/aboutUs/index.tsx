@@ -14,7 +14,6 @@ import ritikImg from '@/untils/images/ritik.jpeg';
 import sohamImg from '@/untils/images/Soham .jpg';
 import sushmitaImg from '@/untils/images/Sushmita.jpg';
 import teamGroup1 from '@/untils/images/1738258039827.jpg';
-import teamWorkspace from '@/untils/images/WhatsApp Image 2025-05-15 at 13.41.09_2ae1e071.jpg';
 import nexusAlumni from '@/untils/images/grp .jpg';
 import formulaTeam from '@/untils/images/whatsapp-image-2025-01-13-at-193205-56e41b1b.jpg';
 import Image from 'next/image';

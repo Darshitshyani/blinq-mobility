@@ -16,7 +16,7 @@ const BlogSection = () => {
       date: "2024",
       author: "Blinq Team",
       image: blog1,
-      url: "/blogs/iitstartupindia-cohort-12",
+      url: "/https://lnkd.in/gBF8uBs8",
       category: "Achievement"
     },
     {
@@ -26,7 +26,7 @@ const BlogSection = () => {
       date: "2024",
       author: "Ankit Kumar",
       image: blog2,
-      url: "/blogs/driving-change-in-urban-mobility",
+      url: "https://startuptimes.net/blinq-mobility-1#",
       category: "Founder Story"
     },
     {
@@ -36,7 +36,7 @@ const BlogSection = () => {
       date: "2024",
       author: "Blinq Team",
       image: blog3,
-      url: "/blogs/meet-abhilasha-sushmita",
+      url: "https://bizbracket.in/womenpreneurs/meet-abhilasha-and-sushmita-innovators-behind-blinq-mobility-success-story/",
       category: "Team Spotlight"
     },
     {
@@ -52,7 +52,7 @@ const BlogSection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-background">
+    <section className="py-10 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -70,7 +70,7 @@ const BlogSection = () => {
         </div>
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {blogs.map((blog) => (
             <Card key={blog.id} className="group rounded-2xl hover:shadow-electric transition-all duration-500 border-border/50 bg-card/50 backdrop-blur shadow-[0_0_30px_rgba(59,166,255,0.3)]">
               <div className="relative overflow-hidden">

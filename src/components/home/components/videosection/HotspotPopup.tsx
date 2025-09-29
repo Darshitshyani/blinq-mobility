@@ -24,7 +24,7 @@ const router = useRouter()
 
   return (
    <div
-  className={`popup absolute z-20 p-2 md:p-4 rounded-xl flex justify-center items-center w-fit  border border-white/20 shadow-xl 
+  className={`popup absolute z-[200] p-2 md:p-4 rounded-xl flex justify-center items-center w-fit  border border-white/20 shadow-xl 
     bg-white/10 backdrop-blur-md backdrop-saturate-150
     ${isVisible ? 'popup-enter-active' : 'popup-enter'}`}
   style={{
