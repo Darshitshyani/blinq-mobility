@@ -7,41 +7,52 @@ interface AnimationStep {
   subtitle: string;
   icon: React.ReactNode;
   color: string;
+  
 }
 
 const animationSteps: AnimationStep[] = [
   {
     id: "battery",
-    title: "Power in Minutes",
-    subtitle: "Full battery in just 5 minutes.",
+    title: "Instant Refuelling",
+    subtitle: "Our battery swapping tech allows you to leave with a fully charged battery in less than 5 minutes, just like filling petrol.",
     icon: <Battery className="h-16 w-16" />,
-    color: "electric-blue"
+    color: "electric-blue",
+    
   },
   {
     id: "commute",
     title: "Built for the City",
-    subtitle: "Compact, safe, and commuter-friendly.",
+    subtitle: "Compact for crowded streets yet roomy enough for comfort, Blinq is designed with safety at its core. Easy to ride, efficient to run, and built for the everyday rhythm of the city.",
     icon: <Car className="h-16 w-16" />,
-    color: "electric-cyan"
+    color: "electric-cyan",
+    
   },
   {
     id: "cost",
-    title: "40% Lower Upfront",
-    subtitle: "Pay only for the car, not the battery.",
+    title: "Lower Vehicle Cost",
+    subtitle: "With Blinq, you own the car while the battery comes as a service. This means 40% lower vehicle cost, easier entry, and faster ROI for drivers and fleet operators.",
     icon: <DollarSign className="h-16 w-16" />,
-    color: "electric-green"
+    color: "electric-green",
+   
   },
   {
     id: "uptime",
-    title: "Always On the Road",
-    subtitle: "16–20 hours of daily availability.",
+    title: "Efficiency That Pays Back",
+    subtitle: "Blinq is engineered for energy efficiency, letting you go farther while spending less. Its electric powertrain cuts running costs by over 60%, making every ride smarter and more sustainable.",
     icon: <Clock className="h-16 w-16" />,
     color: "electric-purple"
   },
   {
     id: "sustainability",
-    title: "Cleaner by Design",
-    subtitle: "Up to 70% fewer CO₂ emissions than ICE taxis.",
+    title: "Always on the Road",
+    subtitle: "Engineered for nonstop operations, Blinq is designed to withstand the daily wear and tear of taxi fleet use with minimal maintenance.",
+    icon: <Leaf className="h-16 w-16" />,
+    color: "electric-green"
+  },
+  {
+    id: "drivers",
+    title: "Happier Drivers, Safer Rides",
+    subtitle: "Comfortable seating, ergonomic design, and safety systems keep drivers alert and passengers protected.",
     icon: <Leaf className="h-16 w-16" />,
     color: "electric-green"
   }
@@ -192,15 +203,65 @@ const SolvingModule = () => {
   const renderAnimation = (step: AnimationStep, isVisible: boolean) => {
     switch (step.id) {
       case "battery":
-        return <BatteryAnimation isVisible={isVisible} />;
+        return  <video
+          className="w-full h-full rounded-2xl object-cover"
+          src="https://res.cloudinary.com/doze8mibh/video/upload/v1759293585/Swapping_ahhmkx.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+        /> 
       case "commute":
-        return <CarAnimation isVisible={isVisible} />;
+        return <video
+          className="w-full h-full rounded-2xl object-cover"
+          src="https://res.cloudinary.com/doze8mibh/video/upload/v1759293585/Car_in_City_ibiqsy.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+        /> ;
       case "cost":
-        return <FleetAnimation isVisible={isVisible} />;
+        return <video
+          className="w-full h-full rounded-2xl object-cover"
+          src="https://res.cloudinary.com/doze8mibh/video/upload/v1759293584/Less_Cost_gmnw7o.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+        />;
       case "uptime":
-        return <ClockAnimation isVisible={isVisible} />;
+        return <video
+          className="w-full h-full rounded-2xl object-cover"
+          src="https://res.cloudinary.com/doze8mibh/video/upload/v1759293584/profits_sjxyua.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+        />;
       case "sustainability":
-        return <EmissionAnimation isVisible={isVisible} />;
+        return <video
+          className="w-full h-full rounded-2xl object-cover"
+          src="https://res.cloudinary.com/doze8mibh/video/upload/v1759293585/Infinity_sqalxg.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+        />;
+         case "drivers":
+        return <video
+          className="w-full h-full rounded-2xl object-cover"
+          src="https://res.cloudinary.com/doze8mibh/video/upload/v1759293585/Cheering_lg8nu3.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+        />;
       default:
         return step.icon;
     }
@@ -236,7 +297,7 @@ const SolvingModule = () => {
               <div
                 className={`flex justify-center ${index % 2 === 1 ? "md:order-1" : ""}`}
               >
-                <div className="bg-card-gradient border border-border rounded-2xl p-10 md:p-12 shadow-accent min-h-[200px] flex items-center justify-center">
+                <div className="bg-card-gradient border border-border rounded-2xl  shadow-accent  md:w-[350px]  flex items-center justify-center">
                   {renderAnimation(step, visibleSteps.has(step.id))}
                 </div>
               </div>

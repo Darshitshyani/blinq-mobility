@@ -112,179 +112,7 @@ const Tech = () => {
   return (
     <div className="min-h-screen mt-[30px]">
       {/* Hero Section - Car Technology */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background gradient */}
-        <div className="absolute inset-0 " />
-        
-        {/* Animated background elements */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-electric-blue rounded-full blur-3xl animate-float" />
-          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-electric-cyan rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}} />
-        </div>
-
-        <div className="relative z-10 container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-          {/* Hero content */}
-          <div ref={heroAnimation.ref} className={`space-y-8 ${heroAnimation.isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}>
-            <div>
-              <h1 className="text-5xl lg:text-7xl font-black mb-4">
-                <span className="text-gradient">BLINQ</span>
-                MOBILITY
-
-                <br />
-                <span className="text-foreground">TECHNOLOGY</span>
-              </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Built for the chaos and charm of Indian cities – compact, efficient, and always ready.
-              </p>
-            </div>
-
-            {/* Key stats */}
-            <div ref={statsAnimation.ref} className="grid grid-cols-2 gap-6">
-              <Card className="p-6 bg-card-gradient border-electric-blue/20 shadow-electric">
-                <div className="text-3xl font-black text-electric-blue mb-2">
-                  0–50 in {counters.speed}s
-                </div>
-                <div className="text-sm text-muted-foreground">Performance punch</div>
-              </Card>
-              <Card className="p-6 bg-card-gradient border-electric-cyan/20 shadow-accent">
-                <div className="text-3xl font-black text-electric-cyan mb-2">
-                  {counters.efficiency} km/kWh
-                </div>
-                <div className="text-sm text-muted-foreground">Efficiency benchmark</div>
-              </Card>
-              <Card className="p-6 bg-card-gradient border-electric-green/20">
-                <div className="text-3xl font-black text-electric-green mb-2">
-                  {counters.range} km in 5min
-                </div>
-                <div className="text-sm text-muted-foreground">Swap advantage</div>
-              </Card>
-              <Card className="p-6 bg-card-gradient border-primary/20">
-                <div className="text-3xl font-black text-primary mb-2">
-                  ₹{counters.cost}/km
-                </div>
-                <div className="text-sm text-muted-foreground">Cost efficiency</div>
-              </Card>
-            </div>
-          </div>
-
-          {/* Hero image */}
-          <div className={`relative ${heroAnimation.isVisible ? 'animate-scale-in' : 'opacity-0'}`}>
-           <div className={`relative ${heroAnimation.isVisible ? 'animate-scale-in' : 'opacity-0'}`}>
-            <video
-  className="w-full h-auto rounded-xl object-cover"
-  src="360video.mp4"
-  autoPlay
-  loop
-  muted
-  playsInline
-  preload="metadata"
-/>
-              <div className="absolute top-4 right-4 animate-bounce-in h-fit">
-                <div className="bg-card/90 backdrop-blur-sm rounded-lg flex  h-[80px] shadow-electric">
-                  <AnimatedBattery />
-                </div>
-              </div>
-          </div>
-            <div className="relative">
-                 
-          
-              <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent rounded-2xl" />
-              
-              {/* Floating tech indicators */}
-              
-            </div>
-              <div className="absolute bottom-4 left-4 animate-bounce-in" style={{animationDelay: '0.5s'}}>
-                <div className="bg-card/90 backdrop-blur-sm rounded-lg p-4">
-                  <AnimatedCar />
-                </div>
-              </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Tech Features Section */}
-      <section className="py-10 md:py-24">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-black mb-6">
-              <span className="text-gradient">Engineering</span> Excellence
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Every component designed for the future of urban mobility
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-4 gap-8">
-            {/* Feature navigation */}
-            <div className="lg:col-span-1 space-y-4">
-              <div className="sticky top-24">
-                {techFeatures.map((feature, index) => (
-                  <button
-                    key={feature.id}
-                    onClick={() => setActiveFeature(index)}
-                    className={`w-full text-left p-4 rounded-xl transition-all duration-300 ${
-                      activeFeature === index 
-                        ? 'bg-primary text-primary-foreground shadow-electric' 
-                        : 'hover:bg-card/50'
-                    }`}
-                  >
-                    <div className="flex items-center space-x-3">
-                      <div className="min-w-[3rem] flex items-center justify-center">
-                        <FeatureIcon 
-                          type={feature.id as any} 
-                          className={activeFeature === index ? 'text-primary-foreground w-8 h-6' : 'text-primary w-8 h-6'} 
-                        />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-sm">{feature.title}</h3>
-                      </div>
-                    </div>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Feature content */}
-          <div className="lg:col-span-3">
-  <Card className="overflow-hidden bg-card-gradient border-electric-blue/20 shadow-xl h-full w-full">
-    <div className="relative overflow-hidden aspect-[16/9] sm:aspect-[4/3] md:aspect-video">
-      <Image
-        src={techFeatures[activeFeature].image}
-        alt={techFeatures[activeFeature].title}
-        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-      />
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-
-      {/* Feature overlay */}
-      <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6">
-        <div className="flex items-center space-x-3 sm:space-x-4">
-          <div className="bg-primary/20 backdrop-blur-sm rounded-lg p-3 sm:p-4 min-w-[2.5rem] sm:min-w-[3rem] flex items-center justify-center">
-            <FeatureIcon
-              type={techFeatures[activeFeature].id as any}
-              className="text-primary w-6 h-6 sm:w-8 sm:h-6"
-            />
-          </div>
-          <div>
-            <h3 className="text-base sm:text-lg md:text-2xl font-bold text-foreground mb-1 md:mb-2">
-              {techFeatures[activeFeature].title}
-            </h3>
-            <p className="text-xs sm:text-sm md:text-md text-muted-foreground leading-snug">
-              {techFeatures[activeFeature].description}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </Card>
-</div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Battery Swapping Section */}
-      <section className="relative py-10 md:py-24 overflow-hidden">
+          <section className="relative py-10 md:py-24 overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0">
           <div className="absolute " />
@@ -302,23 +130,23 @@ const Tech = () => {
             </p>
             
             {/* Swap Animation */}
-            <div className="mb-12">
+            {/* <div className="mb-12">
               <SwapAnimation />
-            </div>
+            </div> */}
 
             {/* Swap highlights */}
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <Card className="p-8 bg-card-gradient border-electric-green/30 shadow-lg">
-                <div className="text-4xl font-black text-electric-green mb-4">₹625</div>
-                <div className="text-lg text-muted-foreground">per swap (250 km range)</div>
+                <div className="text-4xl font-black text-electric-green flex items-center h-full "><p>Flexibility</p></div>
+                {/* <div className="text-lg text-muted-foreground">per swap (250 km range)</div> */}
               </Card>
               <Card className="p-8 bg-card-gradient border-primary/30 shadow-electric">
-                <div className="text-4xl font-black text-primary mb-4">&lt;5 min</div>
-                <div className="text-lg text-muted-foreground">swap time</div>
+                <div className="text-4xl font-black text-primary mb-4">Charge anywhere</div>
+                {/* <div className="text-lg text-muted-foreground">swap time</div> */}
               </Card>
               <Card className="p-8 bg-card-gradient border-electric-cyan/30">
-                <div className="text-4xl font-black text-electric-cyan mb-4">Zero</div>
-                <div className="text-lg text-muted-foreground">range anxiety</div>
+                <div className="text-4xl font-black text-electric-cyan mb-4">Swap anytime.</div>
+                {/* <div className="text-lg text-muted-foreground">range anxiety</div> */}
               </Card>
             </div>
           </div>
@@ -430,6 +258,182 @@ const Tech = () => {
           </div>
         </div>
       </section>
+      <section className="relative lg:h-[80vh] flex items-center justify-center overflow-hidden">
+        {/* Background gradient */}
+        <div className="absolute inset-0 " />
+        
+        {/* Animated background elements */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-electric-blue rounded-full blur-3xl animate-float" />
+          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-electric-cyan rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}} />
+        </div>
+
+        <div className="relative z-10 container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+          {/* Hero content */}
+          <div ref={heroAnimation.ref} className={`space-y-8 ${heroAnimation.isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}>
+            <div>
+              <h1 className="text-5xl lg:text-7xl font-black mb-4">
+                <span className="text-gradient">BLINQ</span>
+                MOBILITY
+
+                <br />
+                <span className="text-foreground">TECHNOLOGY</span>
+              </h1>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                Built for the chaos and charm of Indian cities  compact, efficient, and always ready.
+              </p>
+            </div>
+
+            {/* Key stats */}
+            {/* <div ref={statsAnimation.ref} className="grid grid-cols-2 gap-6">
+              <Card className="p-6 bg-card-gradient border-electric-blue/20 shadow-electric">
+                <div className="text-3xl font-black text-electric-blue mb-2">
+                  0–50 in {counters.speed}s
+                </div>
+                <div className="text-sm text-muted-foreground">Performance punch</div>
+              </Card>
+              <Card className="p-6 bg-card-gradient border-electric-cyan/20 shadow-accent">
+                <div className="text-3xl font-black text-electric-cyan mb-2">
+                  {counters.efficiency} km/kWh
+                </div>
+                <div className="text-sm text-muted-foreground">Efficiency benchmark</div>
+              </Card>
+              <Card className="p-6 bg-card-gradient border-electric-green/20">
+                <div className="text-3xl font-black text-electric-green mb-2">
+                  {counters.range} km in 5min
+                </div>
+                <div className="text-sm text-muted-foreground">Swap advantage</div>
+              </Card>
+              <Card className="p-6 bg-card-gradient border-primary/20">
+                <div className="text-3xl font-black text-primary mb-2">
+                  ₹{counters.cost}/km
+                </div>
+                <div className="text-sm text-muted-foreground">Cost efficiency</div>
+              </Card>
+            </div> */}
+          </div>
+
+          {/* Hero image */}
+          <div className={`relative ${heroAnimation.isVisible ? 'animate-scale-in' : 'opacity-0'}`}>
+           <div className={`relative ${heroAnimation.isVisible ? 'animate-scale-in' : 'opacity-0'}`}>
+            <video
+  className="w-full h-auto rounded-xl object-cover"
+  src="360video.mp4"
+  autoPlay
+  loop
+  muted
+  playsInline
+  preload="metadata"
+/>
+
+              <div className="absolute top-4 right-4 animate-bounce-in h-fit">
+                <div className="bg-card/90 backdrop-blur-sm rounded-lg flex  h-[80px] shadow-electric">
+                  <AnimatedBattery />
+                </div>
+              </div>
+          </div>
+          
+            <div className="relative">
+                 
+          
+              <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent rounded-2xl" />
+              
+              {/* Floating tech indicators */}
+              
+            </div>
+              {/* <div className="absolute bottom-4 left-4 animate-bounce-in" style={{animationDelay: '0.5s'}}>
+                <div className="bg-card/90 backdrop-blur-sm rounded-lg p-4">
+                  <AnimatedCar />
+                </div>
+              </div> */}
+          </div>
+        </div>
+      </section>
+    
+
+      {/* Tech Features Section */}
+      <section className="py-10 md:py-24">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-black mb-6">
+              <span className="text-gradient">Engineering</span> Excellence
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Every component designed for the future of urban mobility
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-4 gap-8">
+            {/* Feature navigation */}
+            <div className="lg:col-span-1 space-y-4">
+              <div className="sticky top-24">
+                {techFeatures.map((feature, index) => (
+                  <button
+                    key={feature.id}
+                    onClick={() => setActiveFeature(index)}
+                    className={`w-full text-left p-4 rounded-xl transition-all duration-300 ${
+                      activeFeature === index 
+                        ? 'bg-primary text-primary-foreground shadow-electric' 
+                        : 'hover:bg-card/50'
+                    }`}
+                  >
+                    <div className="flex items-center space-x-3">
+                      <div className="min-w-[3rem] flex items-center justify-center">
+                        <FeatureIcon 
+                          type={feature.id as any} 
+                          className={activeFeature === index ? 'text-primary-foreground w-8 h-6' : 'text-primary w-8 h-6'} 
+                        />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-sm">{feature.title}</h3>
+                      </div>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Feature content */}
+          <div className="lg:col-span-3">
+  <Card className="overflow-hidden bg-card-gradient border-electric-blue/20 shadow-xl h-full w-full">
+    <div className="relative overflow-hidden aspect-[16/9] sm:aspect-[4/3] md:aspect-video">
+      <Image
+        src={techFeatures[activeFeature].image}
+        alt={techFeatures[activeFeature].title}
+        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+      />
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+
+      {/* Feature overlay */}
+      <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6">
+        <div className="flex items-center space-x-3 sm:space-x-4">
+          <div className="bg-primary/20 backdrop-blur-sm rounded-lg p-3 sm:p-4 min-w-[2.5rem] sm:min-w-[3rem] flex items-center justify-center">
+            <FeatureIcon
+              type={techFeatures[activeFeature].id as any}
+              className="text-primary w-6 h-6 sm:w-8 sm:h-6"
+            />
+          </div>
+          <div>
+            <h3 className="text-base sm:text-lg md:text-2xl font-bold text-foreground mb-1 md:mb-2">
+              {techFeatures[activeFeature].title}
+            </h3>
+            <p className="text-xs sm:text-sm md:text-md text-muted-foreground leading-snug">
+              {techFeatures[activeFeature].description}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Card>
+</div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Battery Swapping Section */}
+    
 
       {/* CTA Section */}
       <section className="py-10 md:py-24 text-center ">
