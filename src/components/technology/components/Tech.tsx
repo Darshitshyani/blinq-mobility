@@ -403,11 +403,13 @@ const router = useRouter();
           <div className="lg:col-span-3">
   <Card className="overflow-hidden bg-card-gradient border-electric-blue/20 shadow-xl h-full w-full">
     <div className="relative overflow-hidden aspect-[16/9] sm:aspect-[4/3] md:aspect-video">
-     { techFeatures[activeFeature].image&&<Image
-        src={techFeatures[activeFeature].image}
-        alt={techFeatures[activeFeature].title}
-        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-      />}
+    {techFeatures[activeFeature].image && (
+  <Image
+    src={techFeatures[activeFeature].image ??""}
+    alt={techFeatures[activeFeature].title}
+    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+  />
+)}
       {techFeatures[activeFeature]?.video && <video
   className="w-full h-auto rounded-xl object-cover"
   src={techFeatures[activeFeature]?.video}
