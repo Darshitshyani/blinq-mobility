@@ -5,7 +5,8 @@ import Image from "next/image";
 import CloseIcon from "@mui/icons-material/Close";
 import { useRouter } from "next/router";
 import CustomPopover from "../CustomPopover";
-import { ArrowDropDown, ArrowDropUp, ArrowRight } from "@mui/icons-material";
+import { ArrowDropDown, ArrowDropUp, ArrowRight, ArrowRightAlt, ForkRight } from "@mui/icons-material";
+import RightDask from "@/untils/icons/RightDask";
 
 const Topbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -91,13 +92,20 @@ const isActive = (path: string) => {
 							handleClose={(event) => setOpenDrop(event)}
 							buttonTitleLabel="Technology"
 							children={
-								<div className="flex flex-col absolute rounded-xl gap-3 p-5  border-white/20 shadow-xl 
+								<div className="flex flex-col absolute rounded-xl gap-3 p-3  border-white/20 shadow-xl 
     bg-white/40 backdrop-blur-md backdrop-saturate-150 border  text-common-black mt-[20px] min-w-[250px]">
-								<p className="cursor-pointer hover:text-primary"   onClick={() => {router.push("/technology")
+      <ul>
+								<li className="cursor-pointer hover:text-primary"   onClick={() => {router.push("/technology/#swap")
                   setOpenDrop(false)  
                 }
                 
-                }>Vehicles and swapping</p>
+                }> <ArrowRightAlt /> swapping</li>
+                <li className="cursor-pointer hover:text-primary"   onClick={() => {router.push("/technology/#vehicles")
+                  setOpenDrop(false)  
+                }
+                
+                }><ArrowRightAlt /> Vehicles </li>
+                </ul>
 								</div>
 							}
 						/>

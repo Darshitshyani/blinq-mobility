@@ -2,18 +2,16 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/shared/Button";
 import { Card } from "@/components/shared/Card";
 import { useTechScrollAnimation } from "@/hooks/useTechScrollAnimation";
-import AnimatedBattery from "@/components/technology/components/AnimatedBattery";
-import AnimatedCar from "@/components/technology/components/AnimatedCar";
-import SwapAnimation from "@/components/technology/components/SwapAnimation";
+
 import FeatureIcon from "@/components/technology/components/FeatureIcon";
 import design from "@/untils/images/tech/Sleek and Elegant design.png";
 import cabin from "@/untils/images/tech/Spacious Cabin.png";
 import sideRealistic2 from "@/untils/images/tech/side realistic 2.png";
-import chassis from "@/untils/images/tech/spaceframe.png";
 import braking from "@/untils/images/tech/Advanced Braking.jpeg";
 import maneuver from "@/untils/images/tech/Compact Manuoverability.png";
 import composive from "@/untils/images/tech/Sleek Design.jpeg";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const Tech = () => {
   const [activeFeature, setActiveFeature] = useState(0);
@@ -57,38 +55,34 @@ const Tech = () => {
       return () => clearInterval(timer);
     }
   }, [statsAnimation.isVisible]);
-
+const router = useRouter();
   const techFeatures = [
     {
       id: 'platform',
       title: 'Skateboard Platform',
       description: 'Flat, modular base enabling multiple vehicle form factors and low center of gravity.',
-      image: sideRealistic2
+      video: "https://res.cloudinary.com/doze8mibh/video/upload/v1759493923/Skateboard_Platform_tcgumd.mp4"
     },
-    {
-      id: 'chassis',
-      title: 'Space Frame Chassis',
-      description: 'Lightweight yet rigid structure ensuring safety and durability.',
-      image: chassis
-    },
+   
     {
       id: 'design',
       title: 'Sleek & Elegant Design',
-      description: 'Aerodynamic form optimized for urban commute.',
+      description: 'A design that drives desire',
       image: design
     },
     {
       id: 'cabin',
       title: 'Spacious Cabin',
-      description: 'Comfortable seating for 4 adults with extra legroom.',
+      description: 'Comfortable seating for 4 adults with extra legroom and boot space.',
       image: cabin
     },
     {
       id: 'composite',
       title: 'Composite Body',
-      description: 'Thermoplastic composites for strength, lightweighting, and easy manufacturing.',
+      description: 'Superior composites for strength, lightweighting, and easy manufacturing.',
       image: composive
     },
+ 
     {
       id: 'maneuver',
       title: 'Compact Maneuverability',
@@ -112,7 +106,7 @@ const Tech = () => {
   return (
     <div className="min-h-screen mt-[30px]">
       {/* Hero Section - Car Technology */}
-          <section className="relative py-10 md:py-24 overflow-hidden">
+          <section className="relative py-10 md:py-24 overflow-hidden" id="swap">
         {/* Background */}
         <div className="absolute inset-0">
           <div className="absolute " />
@@ -128,7 +122,19 @@ const Tech = () => {
             <p className="text-2xl text-muted-foreground mb-8">
               Full power in 5 minutes.
             </p>
-            
+          <div className="w-full flex justify-center my-12">
+              <div className="bg-card-gradient flex items-center justify-center  border border-border rounded-2xl  shadow-accent  md:w-[350px]  flex items-center justify-center">
+            <video
+          className="w-full h-full rounded-2xl object-cover"
+          src="https://res.cloudinary.com/doze8mibh/video/upload/v1759293585/Swapping_ahhmkx.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+        /> 
+        </div></div>  
+          
             {/* Swap Animation */}
             {/* <div className="mb-12">
               <SwapAnimation />
@@ -137,22 +143,23 @@ const Tech = () => {
             {/* Swap highlights */}
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <Card className="p-8 bg-card-gradient border-electric-green/30 shadow-lg">
-                <div className="text-4xl font-black text-electric-green flex items-center h-full "><p>Flexibility</p></div>
-                {/* <div className="text-lg text-muted-foreground">per swap (250 km range)</div> */}
+                <div className="text-4xl font-black text-electric-green mb-4 "><p>Flexibility</p></div>
+     <div className="text-lg text-muted-foreground">Charge anywhere. Swap anytime.</div>
+   
               </Card>
-              <Card className="p-8 bg-card-gradient border-primary/30 shadow-electric">
-                <div className="text-4xl font-black text-primary mb-4">Charge anywhere</div>
-                {/* <div className="text-lg text-muted-foreground">swap time</div> */}
+               <Card className="p-8 bg-card-gradient border-primary/30 shadow-electric">
+                <div className="text-4xl font-black text-primary mb-4">&lt;5 min</div>
+                <div className="text-lg text-muted-foreground">swap time</div>
               </Card>
               <Card className="p-8 bg-card-gradient border-electric-cyan/30">
-                <div className="text-4xl font-black text-electric-cyan mb-4">Swap anytime.</div>
-                {/* <div className="text-lg text-muted-foreground">range anxiety</div> */}
+                <div className="text-4xl font-black text-electric-cyan mb-4">Zero</div>
+                <div className="text-lg text-muted-foreground">range anxiety</div>
               </Card>
             </div>
           </div>
 
           {/* Problems We Solve */}
-          <div className="mb-20">
+          {/* <div className="mb-20">
             <h3 className="text-3xl font-bold text-center mb-12">
               The 3 Big Problems We <span className="text-gradient">Solve</span>
             </h3>
@@ -193,7 +200,7 @@ const Tech = () => {
                 </Card>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* How BlinqSwap Works */}
           <div className="mb-20">
@@ -206,7 +213,7 @@ const Tech = () => {
                 {
                   step: '01',
                   title: 'Drive In',
-                  description: 'Pull into the nearest BlinqSwap station. No bookings, no waiting queues — just drive up.'
+                  description: 'Pull into the nearest BlinqSwap station. No bookings, no waiting queues  just drive up.'
                 },
                 {
                   step: '02', 
@@ -221,7 +228,7 @@ const Tech = () => {
                 {
                   step: '04',
                   title: 'Instant Drive-Off',
-                  description: "You're back on the road with 250 km range — no anxiety, just pure uptime."
+                  description: "You're back on the road with 250 km range  no anxiety, just pure uptime."
                 }
               ].map((step, index) => (
                 <Card key={index} className="p-6 bg-card-gradient text-center">
@@ -234,7 +241,7 @@ const Tech = () => {
           </div>
 
           {/* Microfactory Section */}
-          <div className="text-center">
+          {/* <div className="text-center">
             <h3 className="text-3xl font-bold mb-6">
               The Future of Manufacturing – <span className="text-gradient">Blinq Microfactories</span>
             </h3>
@@ -255,10 +262,10 @@ const Tech = () => {
                 </Card>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
-      <section className="relative lg:h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative  flex items-center justify-center overflow-hidden" id="vehicles">
         {/* Background gradient */}
         <div className="absolute inset-0 " />
         
@@ -268,19 +275,18 @@ const Tech = () => {
           <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-electric-cyan rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}} />
         </div>
 
-        <div className="relative z-10 container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+        <div className="relative z-10  flex flex-col items-center px-6 gap-12 items-center" >
           {/* Hero content */}
-          <div ref={heroAnimation.ref} className={`space-y-8 ${heroAnimation.isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}>
+          <div ref={heroAnimation.ref} className={` space-y-8 ${heroAnimation.isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}>
             <div>
-              <h1 className="text-5xl lg:text-7xl font-black mb-4">
-                <span className="text-gradient">BLINQ</span>
-                MOBILITY
+              <h1 className="text-5xl text-center lg:text-7xl font-black mb-4">
+              The Perfect city car
 
-                <br />
-                <span className="text-foreground">TECHNOLOGY</span>
+
+                
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Built for the chaos and charm of Indian cities  compact, efficient, and always ready.
+               Built for the chaos and charm of Indian cities: compact, efficient, and always ready.
               </p>
             </div>
 
@@ -317,8 +323,8 @@ const Tech = () => {
           <div className={`relative ${heroAnimation.isVisible ? 'animate-scale-in' : 'opacity-0'}`}>
            <div className={`relative ${heroAnimation.isVisible ? 'animate-scale-in' : 'opacity-0'}`}>
             <video
-  className="w-full h-auto rounded-xl object-cover"
-  src="360video.mp4"
+  className="w-full h-[600px] rounded-xl object-cover"
+  src="https://res.cloudinary.com/doze8mibh/video/upload/v1759483700/360_Degree_Video_pykn1i.mp4"
   autoPlay
   loop
   muted
@@ -326,11 +332,11 @@ const Tech = () => {
   preload="metadata"
 />
 
-              <div className="absolute top-4 right-4 animate-bounce-in h-fit">
+              {/* <div className="absolute top-4 right-4 animate-bounce-in h-fit">
                 <div className="bg-card/90 backdrop-blur-sm rounded-lg flex  h-[80px] shadow-electric">
                   <AnimatedBattery />
                 </div>
-              </div>
+              </div> */}
           </div>
           
             <div className="relative">
@@ -356,10 +362,10 @@ const Tech = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-black mb-6">
-              <span className="text-gradient">Engineering</span> Excellence
+              <span className="text-gradient">Excellence</span> Engineered
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Every component designed for the future of urban mobility
+            Every component designed for improved safety and efficiency.
             </p>
           </div>
 
@@ -397,11 +403,20 @@ const Tech = () => {
           <div className="lg:col-span-3">
   <Card className="overflow-hidden bg-card-gradient border-electric-blue/20 shadow-xl h-full w-full">
     <div className="relative overflow-hidden aspect-[16/9] sm:aspect-[4/3] md:aspect-video">
-      <Image
+     { techFeatures[activeFeature].image&&<Image
         src={techFeatures[activeFeature].image}
         alt={techFeatures[activeFeature].title}
         className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-      />
+      />}
+      {techFeatures[activeFeature]?.video && <video
+  className="w-full h-auto rounded-xl object-cover"
+  src={techFeatures[activeFeature]?.video}
+  autoPlay
+  loop
+  muted
+  playsInline
+  preload="metadata"
+/> }
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
 
@@ -441,7 +456,9 @@ const Tech = () => {
           <h2 className="text-4xl font-black mb-6">
             Experience the <span className="text-gradient">Future</span> of Urban Transport
           </h2>
-          <p className="text-xl text-muted-foreground mb-8">
+          <p onClick={()=>{
+            router.push('/contact-us')
+          }} className="text-xl text-muted-foreground mx-auto cursor-pointer hover:bg-card mb-8 p-4 border border-border rounded-xl  w-fit">
             Join the Swap Revolution
           </p>
        

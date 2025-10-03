@@ -32,9 +32,9 @@ const HomePage: React.FC = () => {
 
   </div>
                 <div className="flex flex-col md:flex-row gap-6 mt-[50px] w-full h-full px-4 sm:px-6 lg:px-8 justify-center items-center">
-            <div className="bg-card-gradient border border-border rounded-xl p-6 shadow-accent w-[350px] ">
-              <h3 className="text-xl font-semibold text-primary mb-3">Our Mission</h3>
-              <p className="text-muted-foreground">
+            <div className="w-[60%] mt-20">
+              <h3 className="text-4xl font-semibold text-primary mb-3">Our Mission</h3>
+              <p className="text-muted-foreground text-lg lg:text-xl leading-relaxed">
                Our Mission Make EVs the default choice of commute for the masses by overcoming range anxiety, charging downtime, and high upfront costs and making them better than ICE Vehicles in every way.
 
               </p>
