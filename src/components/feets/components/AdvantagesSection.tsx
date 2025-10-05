@@ -1,13 +1,13 @@
 import { TrendingDown, Clock, Shield, CreditCard, Wrench, DollarSign, Users } from 'lucide-react';
 
 const advantages = [
-  {
-    icon: TrendingDown,
-    title: "40% Lower Operating Costs",
-    description: "₹4/km vs ₹6–12/km",
-    highlight: "₹4/km",
-    color: "text-success"
-  },
+  // {
+  //   icon: TrendingDown,
+  //   title: "40% Lower Operating Costs",
+  //   description: "₹4/km vs ₹6–12/km",
+  //   highlight: "₹4/km",
+  //   color: "text-success"
+  // },
   {
     icon: Clock,
     title: "Zero Downtime",
@@ -22,18 +22,18 @@ const advantages = [
     highlight: "250 km range",
     color: "text-electric-cyan"
   },
-  {
-    icon: CreditCard,
-    title: "Affordable Entry",
-    description: "₹3.5 lakh, battery-as-a-service",
-    highlight: "₹3.5L",
-    color: "text-electric-green"
-  },
+  // {
+  //   icon: CreditCard,
+  //   title: "Affordable Entry",
+  //   description: "₹3.5 lakh, battery-as-a-service",
+  //   highlight: "₹3.5L",
+  //   color: "text-electric-green"
+  // },
   {
     icon: Wrench,
     title: "Built for Fleets",
-    description: "Durable, predictive maintenance, 100,000+ km cycles",
-    highlight: "100,000+ km",
+    description: "A robust and durable ride with Predictive maintenance alerts.",
+    highlight: "5,00,000+ km",
     color: "text-electric-purple"
   }
 ];
@@ -49,7 +49,7 @@ export const AdvantagesSection = () => {
             The <span className="text-gradient">Blinq Advantage</span> for Fleets
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            Not just an EV — a fleet partner engineered for profitability.
+            Not just an EV  a fleet partner engineered for profitability.
           </p>
           
           <div className="inline-flex items-center px-6 py-3  border border-primary/30 bg-primary/10 backdrop-blur-md text-foreground rounded-full  font-semibold text-lg ">
@@ -96,21 +96,21 @@ export const AdvantagesSection = () => {
             <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 backdrop-blur-md rounded-2xl border border-primary/30 flex items-center justify-center group-hover:bg-primary/15 group-hover:border-primary/40 transition-all duration-300">
               <DollarSign className="w-8 h-8 text-primary group-hover:animate-glow-pulse" />
             </div>
-            <div className="text-sm text-muted-foreground mb-2">Massive OPEX Savings</div>
+            <div className="text-lg text-muted-foreground mb-2">Massive OPEX Savings</div>
             <div className="text-lg font-semibold text-foreground">Faster payback with lower running costs</div>
           </div>
           <div className="group bg-card-gradient p-8 rounded-2xl border border-border/20 hover:border-electric-blue/30 transition-all duration-500 hover:shadow-accent-glow">
             <div className="w-16 h-16 mx-auto mb-4 bg-electric-blue/10 backdrop-blur-md rounded-2xl border border-electric-blue/30 flex items-center justify-center group-hover:bg-electric-blue/15 group-hover:border-electric-blue/40 transition-all duration-300">
               <Clock className="w-8 h-8 text-electric-blue group-hover:animate-glow-pulse" />
             </div>
-            <div className="text-sm text-muted-foreground mb-2">Maximum Utilization</div>
+            <div className="text-lg text-muted-foreground mb-2">Maximum Utilization</div>
             <div className="text-lg font-semibold text-foreground">Higher uptime, more trips, more revenue</div>
           </div>
           <div className="group bg-card-gradient p-8 rounded-2xl border border-border/20 hover:border-electric-cyan/30 transition-all duration-500 hover:shadow-accent-glow">
             <div className="w-16 h-16 mx-auto mb-4 bg-electric-cyan/10 backdrop-blur-md rounded-2xl border border-electric-cyan/30 flex items-center justify-center group-hover:bg-electric-cyan/15 group-hover:border-electric-cyan/40 transition-all duration-300">
               <Users className="w-8 h-8 text-electric-cyan group-hover:animate-glow-pulse" />
             </div>
-            <div className="text-sm text-muted-foreground mb-2">Trusted for Passengers</div>
+            <div className="text-lg text-muted-foreground mb-2">Trusted for Passengers</div>
             <div className="text-lg font-semibold text-foreground">Safe, comfortable rides for urban commute</div>
           </div>
         </div>

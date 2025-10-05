@@ -1,4 +1,4 @@
-import { Clock, DollarSign, Battery } from 'lucide-react';
+import { Clock, DollarSign, Battery, Frown } from 'lucide-react';
 
 const problems = [
   {
@@ -10,13 +10,13 @@ const problems = [
   },
   {
     icon: DollarSign,
-    problem: "High Operating Costs",
+    problem: "High Asset Costs",
     description: "Expensive per-km running",
-    solution: "Solved with ₹4/km efficiency",
+    solution: "SSolved through B-A-A-S model.",
     color: "text-warning"
   },
   {
-    icon: Battery,
+    icon: Frown,
     problem: "Driver Anxiety",
     description: "Battery life & range worries",
     solution: "Solved with guaranteed battery health + instant 250 km range",
@@ -54,18 +54,18 @@ export const ProblemsSection = () => {
                 <h3 className="text-2xl font-bold text-foreground mb-2">{item.problem}</h3>
                 <p className="text-muted-foreground mb-4">{item.description}</p>
                 <div className="w-full h-2 bg-danger/20 rounded-full">
-                  <div className="h-full bg-danger rounded-full animate-glow-pulse" style={{ width: '85%' }} />
+                  <div className="h-full bg-success rounded-full animate-glow-pulse" style={{ width: '100%' }} />
                 </div>
               </div>
 
               {/* Arrow Transformation */}
-              <div className="flex items-center justify-center mb-6">
+              {/* <div className="flex items-center justify-center mb-6">
                 <div className="flex items-center space-x-2">
                   <div className="w-8 h-1 bg-danger rounded-full" />
                   <div className="w-0 h-0 border-l-8 border-l-danger border-t-4 border-t-transparent border-b-4 border-b-transparent" />
                   <div className="w-8 h-1 bg-success rounded-full animate-glow-pulse" />
                 </div>
-              </div>
+              </div> */}
 
               {/* Solution */}
               <div className="text-center">

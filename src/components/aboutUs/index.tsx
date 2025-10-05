@@ -8,7 +8,7 @@ import gp4 from "@/untils/images/gp4.jpg"
 import ajeetImg from '@/untils/images/Ajeet.jpg';
 import ankitImg from '@/untils/images/ankit.jpg.png';
 import manasiImg from '@/untils/images/Manasi.jpg';
-import nikeshImg from '@/untils/images/nikesh .jpg';
+import nikeshImg from '@/untils/images/nikesh  1.png';
 import pritishImg from '@/untils/images/Pritish.jpg';
 import ritikImg from '@/untils/images/ritik.jpeg';
 import sohamImg from '@/untils/images/Soham .jpg';
@@ -16,14 +16,16 @@ import sushmitaImg from '@/untils/images/Sushmita.jpg';
 import teamGroup1 from '@/untils/images/1738258039827.jpg';
 import nexusAlumni from '@/untils/images/grp .jpg';
 import formulaTeam from '@/untils/images/whatsapp-image-2025-01-13-at-193205-56e41b1b.jpg';
+import yashDeep from '@/untils/images/Yashdeep.png';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 const boardMembers = [
-  { name: 'Nikesh', image: nikeshImg, role: 'CEO', department: 'Business', fullTitle: 'Director/Co-Founder', linkedin: 'https://www.linkedin.com/in/nikeshbisht/' },
-  { name: 'Sushmita', image: sushmitaImg, role: 'Founder', department: 'Business', fullTitle: 'Director/Co-Founder', linkedin: 'https://www.linkedin.com/in/sushmita-patil-687404219/' },
-  { name: 'Ankit', image: ankitImg, role: 'CTO(M)', department: 'Technical', fullTitle: 'Director/Co-Founder', linkedin: 'https://www.linkedin.com/in/ankit-kumar-119396208/' },
-  { name: 'Abhilasha', image: abhilashaImage, role: 'CTO(E)', department: 'Technical', fullTitle: 'Director/Co-Founder', linkedin: 'https://www.linkedin.com/in/abhilasha-marmat/' },
+  { name: 'Nikesh', image: nikeshImg, role: 'CEO', department: 'Business', linkedin: 'https://www.linkedin.com/in/nikeshbisht/' },
+  { name: 'Sushmita', image: sushmitaImg, role: 'COO', department: 'Business', linkedin: 'https://www.linkedin.com/in/sushmita-patil-687404219/' },
+  { name: 'Ankit', image: ankitImg, role: 'CTO(M)', department: 'Technical', linkedin: 'https://www.linkedin.com/in/ankit-kumar-119396208/' },
+  { name: 'Abhilasha', image: abhilashaImage, role: 'CTO(E)', department: 'Technical', linkedin: 'https://www.linkedin.com/in/abhilasha-marmat/' },
+  { name: 'Yashdeep', image: yashDeep, role: 'Co-Founder', department: 'Technical', linkedin: 'https://www.linkedin.com/in/yashdeep0/' },
 ];
 
 const coreTeam = [
@@ -67,53 +69,39 @@ const About = () => {
       <section className="py-20 px-6 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
+           <div className="space-y-8 animate-fade-in">
             <div>
-              <Badge className="mb-4 bg-electric-cyan/20 text-electric-cyan border-electric-cyan/30">
+              <Badge className="mb-4 bg-electric-cyan/20 text-electric-cyan border-electric-cyan/30 backdrop-blur-sm">
                 <Award className="w-4 h-4 mr-2" />
                 Our Story
               </Badge>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                From Racing Circuits to <span className="text-gradient">City Streets</span>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                From Racing Circuits to <span className="text-gradient">City Streets</span> 🚗⚡
               </h2>
             </div>
             
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-              <p>
-                Our founding team, composed of <span className="text-primary font-semibold">IIT Delhi graduates</span>, 
-                has a rich history of building and racing Formula-style electric vehicles internationally.
+            <div className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed">
+              <p className="hover:text-foreground/80 transition-colors">
+                Blinq Mobility was founded in 2024 with a bold vision to make electric mobility the default choice for the masses. 
+                The company was started by <span className="text-primary font-semibold">Nikesh, Ankit, Abhilasha, Sushmita, and Yashdeep</span>, 
+                all of whom share a common DNA. They were part of <span className="text-accent font-semibold">IIT Delhi's AXLR8R Formula Racing team</span>, 
+                where they designed, built, and raced Formula-style electric cars at international competitions.
               </p>
               
-              <p>
-                From winning prestigious engineering competitions to pioneering sustainable mobility solutions,
-                our journey represents the perfect blend of <span className="text-accent font-semibold">academic excellence</span> and 
-                <span className="text-electric-green font-semibold"> real-world innovation</span>.
+              <p className="hover:text-foreground/80 transition-colors">
+                Those years on the racing circuit taught us far more than just speed. We learned how to 
+                <span className="text-electric-blue font-semibold"> engineer reliable EVs from scratch</span>, lead diverse teams, 
+                manage limited resources like a startup, and innovate under pressure.
               </p>
               
-              <p>
-                This experience, combined with a burning desire to solve mobility problems with technology, 
-                has fueled our commitment to build <span className="text-gradient font-semibold">Blinq</span>.
-              </p>
-              
-              <p>
-                We've taken our racing expertise and channeled it into creating practical, 
-                efficient electric vehicles for urban transportation, backed by our proven track record
-                of <span className="text-electric-cyan font-semibold">engineering excellence</span>.
+              <p className="hover:text-foreground/80 transition-colors">
+                Today, we are channeling that experience into the city streets. Our first product, the 
+                <span className="text-gradient font-semibold"> Blinq Pod</span>, is a lightweight, modular electric vehicle 
+                with <span className="text-electric-cyan font-semibold">less than 5-minute swappable batteries</span>, built to deliver safe, 
+                comfortable, and affordable rides without the downtime of charging.
               </p>
             </div>
-            
-            <div className="grid grid-cols-2 gap-6">
-              <Card className="p-6 bg-card-gradient border-electric-blue/20">
-                <Car className="w-8 h-8 text-electric-blue mb-3" />
-                <h3 className="font-semibold mb-2">Formula Student</h3>
-                <p className="text-sm text-muted-foreground">International racing experience</p>
-              </Card>
-              
-              <Card className="p-6 bg-card-gradient border-electric-cyan/20">
-                <Users className="w-8 h-8 text-electric-cyan mb-3" />
-                <h3 className="font-semibold mb-2">IIT Delhi</h3>
-                <p className="text-sm text-muted-foreground">Top engineering talent</p>
-              </Card>
-            </div>
+          </div>
           </div>
           
           <div className="grid grid-cols-2 gap-4">
@@ -146,72 +134,7 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 px-6 bg-card/50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-electric-green/20 text-electric-green border-electric-green/30">
-              <Target className="w-4 h-4 mr-2" />
-              Our Purpose
-            </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Mission & <span className="text-gradient">Vision</span>
-            </h2>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Mission */}
-            <Card className="p-8 bg-card-gradient border-electric-blue/20 shadow-electric">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-electric-blue/20 rounded-full">
-                  <Target className="w-6 h-6 text-electric-blue" />
-                </div>
-                <h3 className="text-2xl font-bold">Mission</h3>
-              </div>
-              
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Replace ICE taxis with <span className="text-primary font-semibold">cheaper, modular EVs</span> 
-                that transform urban transportation economics and environmental impact.
-              </p>
-              
-              <div className="mt-6 grid grid-cols-2 gap-4">
-                <div className="text-center p-4 bg-electric-blue/10 rounded-lg">
-                  <div className="text-2xl font-bold text-electric-blue">100%</div>
-                  <div className="text-sm text-muted-foreground">Electric Fleet</div>
-                </div>
-                <div className="text-center p-4 bg-electric-blue/10 rounded-lg">
-                  <div className="text-2xl font-bold text-electric-blue">30%</div>
-                  <div className="text-sm text-muted-foreground">Cost Reduction</div>
-                </div>
-              </div>
-            </Card>
-            
-            {/* Vision */}
-            <Card className="p-8 bg-card-gradient border-electric-cyan/20 shadow-accent">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-electric-cyan/20 rounded-full">
-                  <Eye className="w-6 h-6 text-electric-cyan" />
-                </div>
-                <h3 className="text-2xl font-bold">Vision</h3>
-              </div>
-              
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Integrated platform for <span className="text-accent font-semibold">vehicles, batteries, 
-                swap infrastructure & data analytics</span> creating a complete mobility ecosystem.
-              </p>
-              
-              <div className="mt-6 space-y-3">
-                {['Modular Vehicles', 'Battery Swapping', 'Smart Analytics', 'Fleet Management'].map((feature) => (
-                  <div key={feature} className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-electric-cyan rounded-full" />
-                    <span className="text-sm">{feature}</span>
-                  </div>
-                ))}
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
-
+     
       {/* Team Section */}
   <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -233,15 +156,15 @@ const About = () => {
             <h3 className="text-2xl font-bold text-center mb-8">Board of Directors</h3>
             <div className="relative">
               {/* Connecting lines background */}
-              <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
+              {/* <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
                 <div className="w-full h-px bg-electric-blue/30 relative">
                   <div className="absolute top-0 left-1/4 w-px h-16 bg-electric-blue/30 -translate-y-8"></div>
                   <div className="absolute top-0 left-2/4 w-px h-16 bg-electric-blue/30 -translate-y-8"></div>
                   <div className="absolute top-0 left-3/4 w-px h-16 bg-electric-blue/30 -translate-y-8"></div>
                 </div>
-              </div>
+              </div> */}
               
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
+              <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
                 {boardMembers.map((member, index) => (
                   <Card 
                     key={member.name}
@@ -259,15 +182,15 @@ const About = () => {
                       </div>
                     </div>
                     
-                    <div className="text-center">
+                    <div className="text-center ">
                       <h3 className="font-semibold text-lg mb-1">{member.name}</h3>
                       <p className="text-sm font-medium mb-1 text-electric-blue">{member.role}</p>
-                      <p className="text-xs text-muted-foreground mb-4">{member.fullTitle}</p>
+                     
                       <a 
                         href={member.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center w-10 h-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-full hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-lg"
+                        className="inline-flex mt-2 items-center justify-center w-10 h-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-full hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-lg"
                       >
                         <Linkedin className="w-4 h-4 text-electric-blue" />
                       </a>

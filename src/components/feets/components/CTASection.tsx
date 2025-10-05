@@ -31,6 +31,7 @@ export const CTASection = () => {
         {/* CTA Buttons */}
         <div className="flex flex-col  sm:flex-row gap-6 justify-center mb-16">
           <Button 
+           onClick={()=>{router.push("/contact-us")}}
             size="lg" 
             className="group  bg-background border border-primary/50  text-primary-white hover:shadow-electric transition-all duration-300 px-8 py-6 text-lg font-semibold"
           >
@@ -51,7 +52,7 @@ export const CTASection = () => {
         </div>
 
         {/* Trust Indicators */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        {/* <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="text-center">
             <div className="text-3xl font-bold text-gradient mb-2">₹3.5L</div>
             <div className="text-muted-foreground">Affordable Entry Point</div>
@@ -64,10 +65,10 @@ export const CTASection = () => {
             <div className="text-3xl font-bold text-gradient mb-2">16-20h</div>
             <div className="text-muted-foreground">Daily Uptime</div>
           </div>
-        </div>
+        </div> */}
 
         {/* Commuter Benefits */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        {/* <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           <div className="bg-card-gradient p-6 rounded-xl border border-border/20 backdrop-blur-sm">
             <h3 className="font-bold text-foreground mb-2">For Passengers</h3>
             <ul className="text-sm text-muted-foreground space-y-1 text-left">
@@ -86,10 +87,10 @@ export const CTASection = () => {
               <li>✓ Smart telematics & driver analytics</li>
             </ul>
           </div>
-        </div>
+        </div> */}
 
         {/* Final CTA */}
-        <div className="mt-12 p-8 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl ">
+        {/* <div className="mt-12 p-8 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl ">
           <p className=" font-semibold text-lg mb-4">
             Ready to transform your fleet operations?
           </p>
@@ -100,7 +101,7 @@ export const CTASection = () => {
           >
             Start Your Blinq Journey Today
           </Button>
-        </div>
+        </div> */}
       </div>
 
       {/* Decorative Elements */}

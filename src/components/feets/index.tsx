@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, use } from 'react';
 import { Button } from '@/components/shared/Button';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, Calendar, ChevronLeft, ChevronRight, Phone } from 'lucide-react';
 import fleetLineup from '@/untils/images/fleet/flt1.png';
 import fleetHighway from '@/untils/images/fleet/flt2.png';
 import fleetRoad from '@/untils/images/fleet/flt3.png';
@@ -12,6 +12,7 @@ import { AdvantagesSection } from './components/AdvantagesSection';
 import { CalculatorSection } from './components/CalculatorSection';
 import { ImpactSection } from './components/ImpactSection';
 import { CTASection } from './components/CTASection';
+import { useRouter } from 'next/router';
 
 const slides = [
   {
@@ -51,7 +52,7 @@ export const FeetPage = () => {
     return () => clearInterval(timer);
   }, []);
 
-
+const router = useRouter();
 
   return (
     <>
@@ -91,7 +92,15 @@ export const FeetPage = () => {
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-fade-in">
           Purpose-built electric fleets that maximize uptime and slash operating costs.
         </p>
-
+    <Button 
+    onClick={()=>{ router.push("/contact-us")}}
+            size="lg" 
+            className="group  bg-background border border-primary/50  text-primary-white hover:shadow-electric transition-all duration-300 px-8 py-6 text-lg font-semibold"
+          >
+            <Phone className="w-5 h-5  group-hover:animate-glow-pulse" />
+            Quick call
+            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+          </Button>
        
       </div>
       <div className="absolute bottom-0 left-0 w-full h-[40px] bg-gradient-to-t from-card to-transparent pointer-events-none" /> 
@@ -99,7 +108,7 @@ export const FeetPage = () => {
      <ProblemsSection />
       <AdvantagesSection />
       <CalculatorSection />
-      <ImpactSection />
+      {/* <ImpactSection /> */}
       <CTASection />
     </>
   );

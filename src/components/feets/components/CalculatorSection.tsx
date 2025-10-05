@@ -6,14 +6,13 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/shared/Ca
 import { Calculator, TrendingUp, Leaf } from 'lucide-react';
 
 export const CalculatorSection = () => {
-  const [fleetSize, setFleetSize] = useState(1);
+    const [fleetSize, setFleetSize] = useState(10);
   const [dailyKm, setDailyKm] = useState(200);
 
-
   // Calculation formulas
-  const blinqCostPerKm = 1.5;
-  const iceCostPerKm = 4;
-  const co2SavedPerKm = 0.15; // tonnes
+  const blinqCostPerKm = 4;
+  const iceCostPerKm = 10;
+  const co2SavedPerKm = 0.12; // kg
 
   const totalKmPerYear = fleetSize * dailyKm * 365;
   const annualSavings = (iceCostPerKm - blinqCostPerKm) * totalKmPerYear;
@@ -26,7 +25,6 @@ export const CalculatorSection = () => {
       maximumFractionDigits: 0,
     }).format(amount);
   };
-
   return (
     <section className="py-20 px-4 bg-card" id='calc'>
       
@@ -34,7 +32,7 @@ export const CalculatorSection = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 px-6 py-3  rounded-full border border-primary/30 bg-primary/10 backdrop-blur-md text-foreground font-semibold mb-6 shadow-lg hover:bg-primary/15 hover:border-primary/40 transition-all duration-300">
             <Calculator className="w-5 h-5" />
-            <span>Savings & Impact Calculator</span>
+            <span>See your real savings.</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             See Your <span className="text-gradient">Real Savings</span>
@@ -102,10 +100,20 @@ export const CalculatorSection = () => {
                   <div className="text-2xl font-bold text-danger">₹{iceCostPerKm}</div>
                   <div className="text-sm text-muted-foreground">ICE Cost/km</div>
                 </div> */}
-                <div className="text-center p-4 bg-success/5 backdrop-blur-sm rounded-xl border border-success/20 hover:bg-success/10 hover:border-success/30 w-full transition-all duration-300">
-                  <div className="text-2xl font-bold text-success">1.5₹</div>
-                  <div className="text-sm text-muted-foreground">Blinq Cost/km</div>
-                </div>
+                <div className="grid grid-cols-2 gap-4">
+              <Card className="bg-card-gradient border-border/20">
+                <CardContent className="p-4 text-center">
+                  <div className="text-2xl font-bold text-primary">{totalKmPerYear.toLocaleString()}</div>
+                  <div className="text-sm text-muted-foreground">Total KM/Year</div>
+                </CardContent>
+              </Card>
+              <Card className="bg-card-gradient border-border/20">
+                <CardContent className="p-4 text-center">
+                  <div className="text-2xl font-bold text-accent">{(fleetSize * 16).toFixed(0)}h</div>
+                  <div className="text-sm text-muted-foreground">Daily Uptime</div>
+                </CardContent>
+              </Card>
+            </div>
               </div>
             </CardContent>
           </Card>
@@ -135,7 +143,7 @@ export const CalculatorSection = () => {
                   </div>
                   <div>
                     <div className="text-3xl font-bold text-success">
-                      {co2Saved.toFixed(0)} tonnes
+                      {co2Saved.toFixed(0)} Kg
                     </div>
                     <div className="text-muted-foreground">CO₂ eliminated annually</div>
                   </div>
@@ -144,7 +152,7 @@ export const CalculatorSection = () => {
             </Card>
 
             {/* Fleet Stats */}
-            <div className="grid grid-cols-2 gap-4">
+            {/* <div className="grid grid-cols-2 gap-4">
               <Card className="bg-card-gradient border-border/20">
                 <CardContent className="p-4 text-center">
                   <div className="text-2xl font-bold text-primary">{totalKmPerYear.toLocaleString()}</div>
@@ -157,7 +165,7 @@ export const CalculatorSection = () => {
                   <div className="text-sm text-muted-foreground">Daily Uptime</div>
                 </CardContent>
               </Card>
-            </div>
+            </div> */}
 
             {/* <Button className="w-full bg-gradient-electric text-primary-foreground hover:shadow-electric transition-all duration-300 py-6 text-lg font-semibold">
               Get Detailed Fleet Analysis
@@ -167,10 +175,10 @@ export const CalculatorSection = () => {
 
         {/* Bottom Tagline */}
         <div className="text-center mt-16 p-8 bg-gradient-hero rounded-2xl border border-border/20">
-          <p className="text-xl text-muted-foreground mb-4">
-            "A 100-car fleet saves over ₹2 crore annually and eliminates 1,200 tonnes of CO₂ with Blinq."
+          <p className="text-xl text-muted-foreground">
+            A 100-car fleet saves over ₹2 crore annually and eliminates 1,200 tonnes of CO₂ with Blinq.
           </p>
-          <div className="flex items-center justify-center space-x-8 text-sm text-muted-foreground">
+          {/* <div className="flex items-center justify-center space-x-8 text-sm text-muted-foreground">
             <div className="flex items-center space-x-2">
               <div className="w-3 h-3 bg-success rounded-full animate-glow-pulse" />
               <span>Blinq: ₹4/km</span>
@@ -183,7 +191,7 @@ export const CalculatorSection = () => {
               <div className="w-3 h-3 bg-electric-green rounded-full animate-glow-pulse" />
               <span>0.15 tonnes CO₂ saved per km</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
