@@ -176,7 +176,7 @@ export const CalculatorSection = () => {
         {/* Bottom Tagline */}
         <div className="text-center mt-16 p-8 bg-gradient-hero rounded-2xl border border-border/20">
           <p className="text-xl text-muted-foreground">
-            A 100-car fleet saves over ₹2 crore annually and eliminates 1,200 tonnes of CO₂ with Blinq.
+            A 100-car fleet saves over ₹2 crore annually and eliminates 876,000 kg of CO₂ with Blinq.
           </p>
           {/* <div className="flex items-center justify-center space-x-8 text-sm text-muted-foreground">
             <div className="flex items-center space-x-2">
