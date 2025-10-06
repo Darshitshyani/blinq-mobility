@@ -5,7 +5,7 @@ import { Zap, Target, Eye, Users, Award, Car, Linkedin } from 'lucide-react';
 
 import abhilashaImage from '@/untils/images/Abhilasha.jpg';
 import gp4 from "@/untils/images/gp4.jpg"
-import ajeetImg from '@/untils/images/Ajeet.jpg';
+import ajeetImg from '@/untils/images/Ajeet.png';
 import ankitImg from '@/untils/images/ankit.jpg.png';
 import manasiImg from '@/untils/images/Manasi.jpg';
 import nikeshImg from '@/untils/images/nikesh  1.png';
@@ -17,6 +17,9 @@ import teamGroup1 from '@/untils/images/1738258039827.jpg';
 import nexusAlumni from '@/untils/images/grp .jpg';
 import formulaTeam from '@/untils/images/whatsapp-image-2025-01-13-at-193205-56e41b1b.jpg';
 import yashDeep from '@/untils/images/Yashdeep.png';
+import servesh from '@/untils/images/sarvesh.jpg';
+import abhishek from '@/untils/images/Abhisekh.jpg';
+import anish from '@/untils/images/Anees Ahmed Khan.jpg';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
@@ -24,16 +27,19 @@ const boardMembers = [
   { name: 'Nikesh', image: nikeshImg, role: 'CEO', department: 'Business', linkedin: 'https://www.linkedin.com/in/nikeshbisht/' },
   { name: 'Sushmita', image: sushmitaImg, role: 'COO', department: 'Business', linkedin: 'https://www.linkedin.com/in/sushmita-patil-687404219/' },
   { name: 'Ankit', image: ankitImg, role: 'CTO(M)', department: 'Technical', linkedin: 'https://www.linkedin.com/in/ankit-kumar-119396208/' },
+  { name: 'Yashdeep', image: yashDeep, role: 'CPO', department: 'Technical', linkedin: 'https://www.linkedin.com/in/yashdeep0/' },
   { name: 'Abhilasha', image: abhilashaImage, role: 'CTO(E)', department: 'Technical', linkedin: 'https://www.linkedin.com/in/abhilasha-marmat/' },
-  { name: 'Yashdeep', image: yashDeep, role: 'Co-Founder', department: 'Technical', linkedin: 'https://www.linkedin.com/in/yashdeep0/' },
 ];
 
 const coreTeam = [
   { name: 'Manasi', image: manasiImg, role: 'Business & Strategy', department: 'Business', fullTitle: "Founder's Office", linkedin: 'https://www.linkedin.com/in/manasi-korade-1949611a4/' },
-  { name: 'Pritish', image: pritishImg, role: 'Automotive Designer', department: 'Technical', fullTitle: 'Design Lead', linkedin: 'https://www.linkedin.com/in/pritish-karmi-91124717b/' },
+  { name: 'Anees', image: anish, role: 'Founding Engineer', department: 'Technical', fullTitle: ' Electrical Systems', linkedin: 'https://www.linkedin.com/in/anees-ahmed-khan-01300b267/' },
   { name: 'Ritik', image: ritikImg, role: 'Founding Engineer', department: 'Technical', fullTitle: 'Mechanical Systems', linkedin: 'https://www.linkedin.com/in/ritwik-mukherjee1/' },
+  { name: 'Pritish', image: pritishImg, role: 'Automotive Designer', department: 'Technical', fullTitle: 'Design Lead', linkedin: 'https://www.linkedin.com/in/pritish-karmi-91124717b/' },
+  { name: 'Servesh', image: servesh, role: 'Mechanical Engineer', department: 'Technical', fullTitle: 'Engineering Support', linkedin: 'https://www.linkedin.com/in/sarvesh-kailas-thopate-65139523b/' },
   { name: 'Soham', image: sohamImg, role: 'Firmware Engineer', department: 'Technical', fullTitle: 'Electronics Systems', linkedin: 'https://www.linkedin.com/in/soham-patil-660621225/' },
   { name: 'Ajeet', image: ajeetImg, role: 'Technical Associate', department: 'Technical', fullTitle: 'Engineering Support', linkedin: 'https://www.linkedin.com/in/ajeet-jangid-33b2bb1a5/' },
+  { name: 'Abhishek', image: abhishek, role: 'Technical Associate', department: 'Technical', fullTitle: 'Technical Associate', linkedin: 'https://www.linkedin.com/in/abhi-shek-1203b21b7/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
 ];
 const About = () => {
   const router = useRouter()
@@ -187,13 +193,13 @@ const About = () => {
                       <p className="text-sm font-medium mb-1 text-electric-blue">{member.role}</p>
                      
                       <a 
-                        href={member.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex mt-2 items-center justify-center w-10 h-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-full hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-lg"
-                      >
-                        <Linkedin className="w-4 h-4 text-electric-blue" />
-                      </a>
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center w-8 h-8 md:w-9 md:h-9 bg-[#0A66C2] rounded-lg hover:bg-[#004182] hover:scale-110 transition-all duration-300 shadow-lg"
+                    >
+                      <Linkedin className="w-4 h-4 text-white fill-white" />
+                    </a>
                     </div>
                   </Card>
                 ))}
@@ -239,14 +245,14 @@ const About = () => {
                       <h3 className="font-semibold text-base mb-1">{member.name}</h3>
                       <p className="text-sm font-medium mb-1 text-electric-blue">{member.role}</p>
                       <p className="text-xs text-muted-foreground mb-4">{member.fullTitle}</p>
-                      <a 
-                        href={member.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center w-9 h-9 bg-white/10 backdrop-blur-md border border-white/20 rounded-full hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-lg"
-                      >
-                        <Linkedin className="w-4 h-4 text-electric-blue" />
-                      </a>
+                       <a 
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center w-8 h-8 md:w-9 md:h-9 bg-[#0A66C2] rounded-lg hover:bg-[#004182] hover:scale-110 transition-all duration-300 shadow-lg"
+                    >
+                      <Linkedin className="w-4 h-4 text-white fill-white" />
+                    </a>
                     </div>
                   </Card>
                 ))}
@@ -255,16 +261,117 @@ const About = () => {
           </div>
         </div>
       </section>
+        <section className="py-20 px-6 bg-gradient-to-b from-transparent via-card/30 to-transparent relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(120,119,198,0.05),transparent_70%)]" />
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16 animate-fade-in">
+            <Badge className="mb-4 bg-electric-purple/20 text-electric-purple border-electric-purple/30 backdrop-blur-sm">
+              <Award className="w-4 h-4 mr-2" />
+              Media
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Our <span className="text-gradient">Journey</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Reflecting our work culture and team spirit
+            </p>
+          </div>
+
+          {/* Enhanced Gallery Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="relative group overflow-hidden rounded-2xl aspect-[4/3] animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <img 
+                src="https://res.cloudinary.com/doze8mibh/image/upload/v1759684625/Copy_of_IMG_20250913_001938_beqffh.jpg" 
+                alt="Blinq team culture"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+            </div>
+            
+            <div className="relative group overflow-hidden rounded-2xl aspect-[4/3] animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <img 
+                src="https://res.cloudinary.com/doze8mibh/image/upload/v1759684625/Copy_of_IMG_20250913_104217_axphty.jpg" 
+                alt="Team collaboration"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+            </div>
+            
+            <div className="relative group overflow-hidden rounded-2xl aspect-[4/3] animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <img 
+                src="https://res.cloudinary.com/doze8mibh/image/upload/v1759684625/nexus_2_1_hlsayb.jpg" 
+                alt="Nexus achievement"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+            </div>
+            
+            <div className="relative group overflow-hidden rounded-2xl aspect-[4/3] animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <img 
+                src="https://res.cloudinary.com/doze8mibh/image/upload/v1759684625/WhatsApp_Image_2025-01-25_at_23.29.29_0fb77bce_y5tdyo.jpg" 
+                alt="Innovation at work"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+            </div>
+            
+            <div className="relative group overflow-hidden rounded-2xl aspect-[4/3] animate-fade-in" style={{ animationDelay: '0.5s' }}>
+              <img 
+                src="https://res.cloudinary.com/doze8mibh/image/upload/v1759684624/campus_fund_2_siirth.jpg" 
+                alt="Campus funding milestone"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+            </div>
+            
+            <div className="relative group overflow-hidden rounded-2xl aspect-[4/3] animate-fade-in" style={{ animationDelay: '0.6s' }}>
+              <img 
+                src="https://res.cloudinary.com/doze8mibh/image/upload/v1759684624/me_tboxar.jpg" 
+                alt="Team member spotlight"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+            </div>
+            
+            <div className="relative group overflow-hidden rounded-2xl aspect-[4/3] animate-fade-in" style={{ animationDelay: '0.7s' }}>
+              <img 
+                src="https://res.cloudinary.com/doze8mibh/image/upload/v1759684624/Copy_of_WhatsApp_Image_2025-09-28_at_02.06.29_ee0d7390_xeajrd.jpg" 
+                alt="Workshop moments"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+            </div>
+            
+            <div className="relative group overflow-hidden rounded-2xl aspect-[4/3] animate-fade-in" style={{ animationDelay: '0.8s' }}>
+              <img 
+                src="https://res.cloudinary.com/doze8mibh/image/upload/v1759684623/boss_nbjz6g.jpg" 
+                alt="Leadership"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+            </div>
+            
+            <div className="relative group overflow-hidden rounded-2xl aspect-[4/3] animate-fade-in" style={{ animationDelay: '0.9s' }}>
+              <img 
+                src="https://res.cloudinary.com/doze8mibh/image/upload/v1759684623/1738258039827_1_a9giq0.jpg" 
+                alt="Team spirit"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 px-6 bg-card/30">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Join the <span className="text-gradient">Electric Revolution</span>
+          <h2 className="text-4xl md:text-4xl font-bold mb-6">
+            Join the <span className="text-gradient">Powering the Electric Revolution</span>
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Together, we're building the future of urban mobility. 
-            One electric vehicle at a time.
+            Join us to design, build, and scale the EVs redefining how the world moves.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -272,7 +379,7 @@ const About = () => {
             <button onClick={()=>{
               router.push("https://www.notion.so/Blinq-Build-the-Future-of-Mobility-With-Us-27853783cf5b807e90f9c9524c5393c6?source=copy_link")
             }} className="px-8 py-4 bg-secondary text-secondary-foreground font-semibold rounded-lg hover:bg-secondary/80 transition-colors">
-             Careers
+            Be Part of our Journey
             </button>
           </div>
         </div>

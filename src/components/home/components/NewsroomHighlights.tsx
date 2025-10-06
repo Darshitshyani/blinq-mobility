@@ -9,7 +9,10 @@ import wadhwaniImg from "@/untils/images/2.png";
 import deshpandeImg from "@/untils/images/4.png";
 import razorpayImg from "@/untils/images/3.png";
 import iitImg from "@/untils/images/5.png";
+import nexo from "@/untils/images/nexus logo.png";
 import atalImg from "@/untils/images/Atal_Incubation_Centre_Banasthali_Vidyapith_0e560e4ffa.png";
+import i8 from "@/untils/images/8i Ventures.png"
+import iima from "@/untils/images/lsy9lfce67de1.png"
 import Image from "next/image";
 
 const highlights = [
@@ -21,6 +24,7 @@ const highlights = [
     type: "Grant",
     delay: "0"
   },
+  
   {
     category: "Urban Mobility",
     title: "DPIIT Startup India Recognition",
@@ -66,6 +70,29 @@ const highlights = [
     title: "Atal Incubation Centre",
     description: "Supported by Atal Incubation Centre, Banasthali Vidyapith under the Atal Innovation Mission for women-led innovation in mobility.",
     image: atalImg,
+    type: "Incubation",
+    delay: "600"
+  },
+    {
+    category: "Meet the Innovators",
+    title: "Atal Incubation Centre",
+    description: "Supported by Atal Incubation Centre, Banasthali Vidyapith under the Atal Innovation Mission for women-led innovation in mobility.",
+    image: nexo,
+    type: "Incubation",
+    delay: "600"
+  },
+   {
+    category: "Meet the Innovators",
+    title: "Atal Incubation Centre",
+    description: "Supported by Atal Incubation Centre, Banasthali Vidyapith under the Atal Innovation Mission for women-led innovation in mobility.",
+    image: i8,
+    type: "Incubation",
+    delay: "600"
+  } ,{
+    category: "Meet the Innovators",
+    title: "Atal Incubation Centre",
+    description: "Supported by Atal Incubation Centre, Banasthali Vidyapith under the Atal Innovation Mission for women-led innovation in mobility.",
+    image: iima,
     type: "Incubation",
     delay: "600"
   }
@@ -148,12 +175,12 @@ export default function NewsroomHighlights() {
                
                  
                     {/* Logo */}
-                    <div className="flex justify-center mb-3">
+                    <div className="flex justify-center mb-3 w-[200px] h-[200px]">
                      
                         <Image
                           src={highlight.image as any}
                           alt={highlight.title}
-                          className="w-[200px] rounded object-contain filter transition-all duration-300"
+                          className="w-full h-full rounded object-contain filter transition-all duration-300"
                         />
 
                     </div>

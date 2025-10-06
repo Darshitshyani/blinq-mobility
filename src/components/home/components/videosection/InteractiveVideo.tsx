@@ -15,21 +15,21 @@ const DEFAULT_HOTSPOTS: Hotspot[] = [
     x: 35,
     y: 15,
     title: 'Microfactory',
-    links:"/",
+    links:"/technology#vehicles",
   },
   {
-    id: 'Technology',
+    id: 'Fleets',
     x: 52,
     y: 30,
     title: 'Fleets',
     links: "/fleets",
   },
   {
-    id: 'Feets',
+    id: 'Swapping',
     x: 50,
     y: 60,
     title: 'Swapping',
-    links: "/",
+    links: "/technology#swapping",
   },
   {
     id: 'aboutus',
@@ -43,21 +43,21 @@ const DEFAULT_HOTSPOTS: Hotspot[] = [
     x: 80,
     y: 25,
     title: 'Blogs',
-    links: "/blogs/iitstartupindia-cohort-12",
+    links: "/#blog",
   },
   {
     id: 'Vehicles',
     x: 44,
     y: 35,
     title: 'Vehicles',
-    links: "/blogs",
+    links: "/technology#vehicles",
   },
   {
     id: 'Our mission',
     x: 20,
     y: 10,
     title: 'Our mission',
-    links: "/",
+    links: "/#mission",
   },
 ];
 
@@ -68,7 +68,7 @@ const MOBILE_HOTSPOTS: Hotspot[] = [
     x: 35,
     y: 15,
     title: 'Microfactory',
-    links:"/",
+    links:"/technology#vehicles",
   },
   {
     id: 'Technology',
@@ -82,7 +82,7 @@ const MOBILE_HOTSPOTS: Hotspot[] = [
     x: 50,
     y: 60,
     title: 'Swapping',
-    links: "/",
+    links: "/technology#swapping",
   },
   {
     id: 'aboutus',
@@ -96,14 +96,14 @@ const MOBILE_HOTSPOTS: Hotspot[] = [
     x: 90, // Changed from 80 to 90 for mobile
     y: 25,
     title: 'Blogs',
-    links: "/blogs/iitstartupindia-cohort-12",
+    links: "/#blog",
   },
   {
     id: 'Vehicles',
     x: 30,
     y: 35,
     title: 'Vehicles',
-    links: "/",
+    links: "/technology#vehicles",
   },
 ];
 export const InteractiveVideo = () => {

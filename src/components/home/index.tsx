@@ -3,7 +3,7 @@ import SolvingModule from "./components/SolvingModule";
 import NewsroomHighlights from "./components/NewsroomHighlights";
 import BlogSection from "./components/BlogSection";
 import { InteractiveVideo } from "./components/videosection/InteractiveVideo";
-import VehicleShowcase from "./components/VehicleShowcase";
+
 
 
 
@@ -20,7 +20,7 @@ const HomePage: React.FC = () => {
 
 </div>
  <div
- className=" flex  bg-background flex-col text-black-100 justify-center items-center text-center relative pt-[120px] lg:min-h-screen">
+ className=" flex  bg-background flex-col text-black-100 justify-center items-center text-center relative pt-[120px] lg:min-h-screen" id="mission">
   <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-background to-transparent pointer-events-none" />
 
   <div className="w-full px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-center">
@@ -31,7 +31,7 @@ const HomePage: React.FC = () => {
 				
 
   </div>
-                <div className="flex flex-col md:flex-row gap-6 mt-[50px] w-full h-full px-4 sm:px-6 lg:px-8 justify-center items-center">
+                <div className="flex flex-col md:flex-row gap-6 mt-[50px] w-full h-full px-4 sm:px-6 lg:px-8 justify-center items-center" >
             <div className="w-[60%] mt-20">
               <h3 className="text-4xl font-semibold text-primary mb-3">Our Mission</h3>
               <p className="text-muted-foreground text-lg lg:text-xl leading-relaxed">

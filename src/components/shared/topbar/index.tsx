@@ -5,8 +5,11 @@ import Image from "next/image";
 import CloseIcon from "@mui/icons-material/Close";
 import { useRouter } from "next/router";
 import CustomPopover from "../CustomPopover";
-import { ArrowDropDown, ArrowDropUp, ArrowRight, ArrowRightAlt, ForkRight } from "@mui/icons-material";
-import RightDask from "@/untils/icons/RightDask";
+import {
+  ArrowDropDown,
+  ArrowDropUp,
+  ArrowRightAlt,
+} from "@mui/icons-material";
 
 const Topbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,6 +19,7 @@ const Topbar = () => {
 
   const router = useRouter();
 
+  // handle scroll
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 10;
@@ -34,20 +38,19 @@ const Topbar = () => {
     }, 350);
   };
 
-  // Helper: check if current path matches
-const isActive = (path: string) => {
-  if (path === "/blogs") {
-    return router.pathname.startsWith("/blogs");
-  }
-  return router.pathname === path;
-};
+  const isActive = (path: string) => {
+    if (path === "/blogs") return router.pathname.startsWith("/blogs");
+    return router.pathname === path;
+  };
+
   return (
     <>
       <div
         className={`h-[90px] w-full flex justify-between items-center px-3 fixed z-50 transition-all duration-300 ${
-          scrolled ? "bg-white/10 backdrop-blur-2xl border-gray-200 shadow-sm" : ""
+          scrolled ? "bg-black/10 backdrop-blur-2xl border-gray-200 shadow-sm" : ""
         }`}
       >
+        {/* Logo */}
         <div>
           <h1
             className="text-[22px] text-white font-bold flex mb-0 items-center cursor-pointer"
@@ -72,45 +75,46 @@ const isActive = (path: string) => {
             Home
           </p>
 
-          {/* <p
-            className={`cursor-pointer transition-colors duration-200 ${
-              isActive("/technology")
-                ? "text-primary font-semibold"
-                : "hover:text-primary-main"
+          {/* Technology Dropdown (Permanent Blur) */}
+          <div
+            className={`flex items-center justify-center gap-1 hover:text-primary-main transition-colors duration-200 ${
+              openDrop && "text-primary-main"
             }`}
-            onClick={() => router.push("/technology")}
           >
-            Technology
-          </p> */}
-          	<div
-						className={`flex items-center justify-center gap-1 hover:text-primary-main transition-colors duration-200 ${
-							openDrop && "text-primary-main"
-						}`}
-					>
-						<CustomPopover
-							isOpen={openDrop}
-							handleClose={(event) => setOpenDrop(event)}
-							buttonTitleLabel="Technology"
-							children={
-								<div className="flex flex-col absolute rounded-xl gap-3 p-3  border-white/20 shadow-xl 
-    bg-white/40 backdrop-blur-md backdrop-saturate-150 border  text-common-black mt-[20px] min-w-[250px]">
-      <ul>
-								<li className="cursor-pointer hover:text-primary"   onClick={() => {router.push("/technology/#swap")
-                  setOpenDrop(false)  
-                }
-                
-                }> <ArrowRightAlt /> swapping</li>
-                <li className="cursor-pointer hover:text-primary"   onClick={() => {router.push("/technology/#vehicles")
-                  setOpenDrop(false)  
-                }
-                
-                }><ArrowRightAlt /> Vehicles </li>
-                </ul>
-								</div>
-							}
-						/>
-						{openDrop ? <ArrowDropUp /> : <ArrowDropDown />}
-					</div>
+            <CustomPopover
+              isOpen={openDrop}
+              handleClose={(event) => setOpenDrop(event)}
+              buttonTitleLabel="Technology"
+              children={
+                <div
+                  className="flex flex-col absolute rounded-xl gap-3 p-3 border border-white/20 shadow-xl 
+                  !bg-card backdrop-saturate-150 mt-[20px] min-w-[250px]"
+                >
+                  <ul>
+                    <li
+                      className="cursor-pointer hover:text-primary flex items-center gap-1"
+                      onClick={() => {
+                        router.push("/technology/#swap");
+                        setOpenDrop(false);
+                      }}
+                    >
+                      <ArrowRightAlt /> Swapping
+                    </li>
+                    <li
+                      className="cursor-pointer hover:text-primary flex items-center gap-1"
+                      onClick={() => {
+                        router.push("/technology/#vehicles");
+                        setOpenDrop(false);
+                      }}
+                    >
+                      <ArrowRightAlt /> Vehicles
+                    </li>
+                  </ul>
+                </div>
+              }
+            />
+            {openDrop ? <ArrowDropUp /> : <ArrowDropDown />}
+          </div>
 
           <p
             className={`cursor-pointer transition-colors duration-200 ${
@@ -122,17 +126,17 @@ const isActive = (path: string) => {
           >
             Fleets
           </p>
-           <p
+
+          <p
             className={`cursor-pointer transition-colors duration-200 ${
               isActive("/blogs")
                 ? "text-primary font-semibold"
                 : "hover:text-primary-main"
             }`}
-            onClick={() => router.push("/blogs/iitstartupindia-cohort-12")}
+            onClick={() => router.push("/#blog")}
           >
             Blogs
           </p>
-
 
           <p
             className={`cursor-pointer transition-colors duration-200 ${
@@ -144,19 +148,18 @@ const isActive = (path: string) => {
           >
             About Us
           </p>
+
           <p
             className={`cursor-pointer transition-colors duration-200 ${
-              isActive("/contect-us")
+              isActive("/contact-us")
                 ? "text-primary font-semibold"
                 : "hover:text-primary-main"
             }`}
             onClick={() => router.push("/contact-us")}
           >
-            contact Us
+            Contact Us
           </p>
         </div>
-
-     
 
         {/* Mobile Menu Button */}
         <div
@@ -172,16 +175,15 @@ const isActive = (path: string) => {
         <>
           {/* Backdrop */}
           <div
-            className="fixed inset-0 bg-black/30 backdrop-blur-4xl z-40 animate-fade-in"
+            className="fixed inset-0 bg-black/30 backdrop-blur-2xl z-40 animate-fade-in"
             onClick={handleSidebarClose}
           />
           {/* Sidebar */}
           <div
             className={`fixed w-[85%] h-full bg-background/95 backdrop-blur-3xl right-0 flex flex-col z-50 shadow-xl 
-      ${isClosing ? "animate-slide-out-right" : "animate-slide-in-left"}
-    `}
+              ${isClosing ? "animate-slide-out-right" : "animate-slide-in-left"}`}
           >
-            <div className="h-[70px] border-b border-acent w-full flex justify-between items-center px-4 ">
+            <div className="h-[70px] border-b border-acent w-full flex justify-between items-center px-4">
               <h1 className="text-[22px] text-primary font-semibold flex items-center">
                 Blinq Mobility
               </h1>
@@ -233,7 +235,8 @@ const isActive = (path: string) => {
               >
                 Fleets
               </div>
-                 <div
+
+              <div
                 className={`py-4 cursor-pointer ${
                   isActive("/blogs")
                     ? "text-primary-main font-bold"
@@ -268,9 +271,7 @@ const isActive = (path: string) => {
                     : "hover:text-primary-main"
                 }`}
                 onClick={() => {
-               
-                    router.push("/contact-us");
-                  
+                  router.push("/contact-us");
                   handleSidebarClose();
                 }}
               >

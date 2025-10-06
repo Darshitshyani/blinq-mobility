@@ -5,6 +5,7 @@ import blog1 from "@/untils/images/blog/blog1.jpg"
 import blog2 from "@/untils/images/blog/blog2.webp"
 import blog3 from "@/untils/images/blog/blog3.png"
 import blog4 from "@/untils/images/blog/blog4.jpg"
+import blog5 from "@/untils/images/blog5.png"
 import Image from "next/image";
 
 const BlogSection = () => {
@@ -16,7 +17,7 @@ const BlogSection = () => {
       date: "2024",
       author: "Blinq Team",
       image: blog1,
-      url: "/https://lnkd.in/gBF8uBs8",
+      url: "https://www.linkedin.com/feed/update/urn:li:activity:7290788013968703488",
       category: "Achievement"
     },
     {
@@ -46,13 +47,23 @@ const BlogSection = () => {
       date: "2024",
       author: "Blinq Research",
       image: blog4,
-      url: "/blogs/energy-transition-ride-hailing",
+      url: "https://www.linkedin.com/pulse/how-energy-transition-disrupting-ride-hailing-market-sushmita-patil-ctzyf/",
+      category: "Industry Insights"
+    },
+     {
+      id: 5,
+      title: "Battery Swapping: Powering the Next Wave of EV Adoption",
+      description: "If charging is “plug in and wait,” battery swapping is “pull in and go.” Instead of tethering a vehicle for 30–90 minutes, drivers exchange a depleted battery for a fully charged one in just a couple of minutes and get back on the road. It’s quick, clean, and built for high-utilization fleets and everyday riders alike.",
+      date: "2024",
+      author: "Blinq Research",
+      image: blog5,
+      url: "https://www.linkedin.com/pulse/battery-swapping-powering-next-wave-ev-adoption-blinq-mobility-pbkgf/",
       category: "Industry Insights"
     }
   ];
 
   return (
-    <section className="py-10 px-4 bg-background">
+    <section className="py-10 px-4 bg-background" id="blog">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">

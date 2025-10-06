@@ -9,14 +9,9 @@ const Footer = () => {
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about-us" },
     { name: "Technology", href: "/technology" },
-    { name: "Blog", href: "blogs/iitstartupindia-cohort-12" },
-    { name: "Contact", href: "/contact-us" },
+    { name: "Blog", href: "/#blog" },
+    { name: "Contact us", href: "/contact-us" },
   ];
-https:  
-Insta: 
-X: 
-FB: 
-
 
 
   return (
@@ -51,9 +46,8 @@ FB:
               <Button size="sm" variant="ghost" className="p-2 h-auto hover:bg-electric-blue/10" onClick={() => window.open('//www.linkedin.com/company/blinq-mobility/', '_blank')}>
                 <Linkedin className="w-4 h-4 text-muted-foreground hover:text-electric-blue" />
               </Button>
-              <Button size="sm" variant="ghost" className="p-2 h-auto hover:bg-electric-blue/10" onClick={() => window.open('https://x.com/Blinqmobility', '_blank')}>
-                <Twitter className="w-4 h-4 text-muted-foreground hover:text-electric-blue" />
-              </Button>
+              <Button size="sm" variant="ghost" className="p-2 h-auto hover:bg-electric-blue/10 text-white" onClick={() => window.open('https://x.com/Blinqmobility', '_blank')}>
+             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 1226.37 1226.37"><g><path d="M727.348 519.284 1174.075 0h-105.86L680.322 450.887 370.513 0H13.185l468.492 681.821L13.185 1226.37h105.866l409.625-476.152 327.181 476.152h357.328L727.322 519.284zM582.35 687.828l-47.468-67.894-377.686-540.24H319.8l304.797 435.991 47.468 67.894 396.2 566.721H905.661L582.35 687.854z" fill="#ffffff" opacity="1" data-original="#000000" ></path></g></svg> </Button>
               <Button size="sm" variant="ghost" className="p-2 h-auto hover:bg-electric-blue/10" onClick={() => window.open('https://www.instagram.com/blinqmobility/', '_blank')}>
                 <Instagram className="w-4 h-4 text-muted-foreground hover:text-electric-blue" />
               </Button>
@@ -84,7 +78,8 @@ FB:
   <div className="mb-6 w-full">
               
               <p className="text-muted-foreground text-start leading-relaxed mb-6">
-                Revolutionizing urban mobility with sustainable electric vehicles. Purpose built pods offering 4-wheeler experience at 3-wheeler price
+               Making EVs the default choice of commute for the masses by solving the adoption challenges by technolog, and making them better than ICE Vehicles in every way.
+
               </p>
             </div>
           

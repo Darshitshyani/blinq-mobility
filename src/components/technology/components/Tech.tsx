@@ -6,8 +6,8 @@ import { useTechScrollAnimation } from "@/hooks/useTechScrollAnimation";
 import FeatureIcon from "@/components/technology/components/FeatureIcon";
 import design from "@/untils/images/tech/Sleek and Elegant design.png";
 import cabin from "@/untils/images/tech/Spacious Cabin.png";
-import sideRealistic2 from "@/untils/images/tech/side realistic 2.png";
 import braking from "@/untils/images/tech/Advanced Braking.jpeg";
+import aiImage from "@/untils/images/Ai Enabled Features.png";
 import maneuver from "@/untils/images/tech/Compact Manuoverability.png";
 import composive from "@/untils/images/tech/Sleek Design.jpeg";
 import Image from "next/image";
@@ -93,7 +93,7 @@ const router = useRouter();
       id: 'ai',
       title: 'AI-Enabled Features',
       description: 'Driver drowsiness detection, predictive maintenance, and smart alerts.',
-      image: sideRealistic2
+      image: aiImage
     },
     {
       id: 'braking',
