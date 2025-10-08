@@ -9,7 +9,7 @@ const TechPage = () => {
 <div className="absolute bottom-0 left-0 w-full h-[40px] bg-gradient-to-t from-background to-transparent pointer-events-none" />
         <video
   className="w-full h-full object-cover"
-  src="Battery.mp4"
+  src="https://res.cloudinary.com/doze8mibh/video/upload/v1759897983/Swapping_2_a7qr6a.mp4"
   autoPlay
   loop
   muted
