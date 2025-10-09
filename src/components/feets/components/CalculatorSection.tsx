@@ -30,10 +30,10 @@ export const CalculatorSection = () => {
       
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 px-6 py-3  rounded-full border border-primary/30 bg-primary/10 backdrop-blur-md text-foreground font-semibold mb-6 shadow-lg hover:bg-primary/15 hover:border-primary/40 transition-all duration-300">
+          {/* <div className="inline-flex items-center space-x-2 px-6 py-3  rounded-full border border-primary/30 bg-primary/10 backdrop-blur-md text-foreground font-semibold mb-6 shadow-lg hover:bg-primary/15 hover:border-primary/40 transition-all duration-300">
             <Calculator className="w-5 h-5" />
             <span>See your real savings.</span>
-          </div>
+          </div> */}
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             See Your <span className="text-gradient">Real Savings</span>
           </h2>

@@ -25,7 +25,7 @@ const BlogSection = () => {
       title: "Driving Change in Urban Mobility: The Blinq Mobility Journey",
       description: "From Formula Student to revolutionary electric pods - discover how IIT Delhi graduate Ankit Kumar is transforming urban transport with purpose-built vehicles.",
       date: "2024",
-      author: "Ankit Kumar",
+      author: " Startup time",
       image: blog2,
       url: "https://startuptimes.net/blinq-mobility-1#",
       category: "Founder Story"
@@ -35,7 +35,7 @@ const BlogSection = () => {
       title: "Meet Abhilasha & Sushmita: Innovators Behind Blinq Mobility",
       description: "Two trailblazing women entrepreneurs transforming urban mobility with electric pods that promise smarter, sustainable, and efficient transportation solutions.",
       date: "2024",
-      author: "Blinq Team",
+      author: " Biz Bracket",
       image: blog3,
       url: "https://bizbracket.in/womenpreneurs/meet-abhilasha-and-sushmita-innovators-behind-blinq-mobility-success-story/",
       category: "Team Spotlight"

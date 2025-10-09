@@ -98,7 +98,7 @@ const router = useRouter();
             className="group  bg-background border border-primary/50  text-primary-white hover:shadow-electric transition-all duration-300 px-8 py-6 text-lg font-semibold"
           >
             <Phone className="w-5 h-5  group-hover:animate-glow-pulse" />
-            Quick call
+            Book a Demo
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
           </Button>
        

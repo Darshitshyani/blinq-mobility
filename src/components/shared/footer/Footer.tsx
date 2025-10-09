@@ -16,7 +16,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-card border-t border-border overflow-hidden relative">
-      <div className="max-w-7xl mx-auto px-4 py-6">
+      <div className="max-w-7xl mx-auto px-4 pt-4">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-6">
           {/* Company Info */}
@@ -44,15 +44,15 @@ const Footer = () => {
             {/* Social Links */}
             <div className="flex gap-4 mt-6">
               <Button size="sm" variant="ghost" className="p-2 h-auto hover:bg-electric-blue/10" onClick={() => window.open('//www.linkedin.com/company/blinq-mobility/', '_blank')}>
-                <Linkedin className="w-4 h-4 text-muted-foreground hover:text-electric-blue" />
+                <Linkedin className="w-4 h-4 text-electric-blue hover:text-electric-blue" />
               </Button>
-              <Button size="sm" variant="ghost" className="p-2 h-auto hover:bg-electric-blue/10 text-white" onClick={() => window.open('https://x.com/Blinqmobility', '_blank')}>
-             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 1226.37 1226.37"><g><path d="M727.348 519.284 1174.075 0h-105.86L680.322 450.887 370.513 0H13.185l468.492 681.821L13.185 1226.37h105.866l409.625-476.152 327.181 476.152h357.328L727.322 519.284zM582.35 687.828l-47.468-67.894-377.686-540.24H319.8l304.797 435.991 47.468 67.894 396.2 566.721H905.661L582.35 687.854z" fill="#ffffff" opacity="1" data-original="#000000" ></path></g></svg> </Button>
+              <Button size="sm" variant="ghost" className="p-2 h-auto hover:bg-electric-blue/10  text-electric-blue" onClick={() => window.open('https://x.com/Blinqmobility', '_blank')}>
+             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 1226.37 1226.37"><g><path d="M727.348 519.284 1174.075 0h-105.86L680.322 450.887 370.513 0H13.185l468.492 681.821L13.185 1226.37h105.866l409.625-476.152 327.181 476.152h357.328L727.322 519.284zM582.35 687.828l-47.468-67.894-377.686-540.24H319.8l304.797 435.991 47.468 67.894 396.2 566.721H905.661L582.35 687.854z" fill="currentColor" opacity="1" data-original="#000000" ></path></g></svg> </Button>
               <Button size="sm" variant="ghost" className="p-2 h-auto hover:bg-electric-blue/10" onClick={() => window.open('https://www.instagram.com/blinqmobility/', '_blank')}>
-                <Instagram className="w-4 h-4 text-muted-foreground hover:text-electric-blue" />
+                <Instagram className="w-4 h-4  text-electric-blue" />
               </Button>
               <Button size="sm" variant="ghost" className="p-2 h-auto hover:bg-electric-blue/10" onClick={() => window.open('https://www.facebook.com/profile.php?id=61563763277003', '_blank')}>
-                <Facebook className="w-4 h-4 text-muted-foreground hover:text-electric-blue" />
+                <Facebook className="w-4 h-4  text-electric-blue" />
               </Button>
             </div>
           </div>
@@ -87,7 +87,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-border pt-4 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
             © {currentYear} Blinq Mobility Private Limited. All rights reserved.
           </p>
@@ -96,9 +96,10 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    <div className=" mx-auto px-4 py-4 text-black font-extrabold   uppercase w-full text-primary flex justify-center items-center py-6">
-  <h1 className="text-[7vw] leading-none tracking-wide">SWAP DRIVE REPEAT</h1>
+    <div className="mx-auto text-black font-extrabold uppercase w-full text-primary flex justify-center items-center">
+  <h1 className="text-[7vw] leading-none tracking-[1vw]">SWAP DRIVE REPEAT</h1>
 </div>
+
     </footer>
   );
 };

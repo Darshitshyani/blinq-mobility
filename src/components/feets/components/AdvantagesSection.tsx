@@ -110,7 +110,7 @@ export const AdvantagesSection = () => {
             <div className="w-16 h-16 mx-auto mb-4 bg-electric-cyan/10 backdrop-blur-md rounded-2xl border border-electric-cyan/30 flex items-center justify-center group-hover:bg-electric-cyan/15 group-hover:border-electric-cyan/40 transition-all duration-300">
               <Users className="w-8 h-8 text-electric-cyan group-hover:animate-glow-pulse" />
             </div>
-            <div className="text-lg text-muted-foreground mb-2">Trusted for Passengers</div>
+            <div className="text-lg text-muted-foreground mb-2">Trusted by Passengers</div>
             <div className="text-lg font-semibold text-foreground">Safe, comfortable rides for urban commute</div>
           </div>
         </div>

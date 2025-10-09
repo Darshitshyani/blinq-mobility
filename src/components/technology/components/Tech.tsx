@@ -148,12 +148,12 @@ const router = useRouter();
    
               </Card>
                <Card className="p-8 bg-card-gradient border-primary/30 shadow-electric">
-                <div className="text-4xl font-black text-primary mb-4">&lt;5 min</div>
-                <div className="text-lg text-muted-foreground">swap time</div>
+                <div className="text-4xl font-black text-primary mb-4">&lt;5 Min</div>
+                <div className="text-lg text-muted-foreground">Swap Time</div>
               </Card>
               <Card className="p-8 bg-card-gradient border-electric-cyan/30">
                 <div className="text-4xl font-black text-electric-cyan mb-4">Zero</div>
-                <div className="text-lg text-muted-foreground">range anxiety</div>
+                <div className="text-lg text-muted-foreground">Range Anxiety</div>
               </Card>
             </div>
           </div>

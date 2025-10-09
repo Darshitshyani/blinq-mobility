@@ -24,22 +24,22 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 const boardMembers = [
-  { name: 'Nikesh', image: nikeshImg, role: 'CEO', department: 'Business', linkedin: 'https://www.linkedin.com/in/nikeshbisht/' },
-  { name: 'Sushmita', image: sushmitaImg, role: 'COO', department: 'Business', linkedin: 'https://www.linkedin.com/in/sushmita-patil-687404219/' },
-  { name: 'Ankit', image: ankitImg, role: 'CTO(M)', department: 'Technical', linkedin: 'https://www.linkedin.com/in/ankit-kumar-119396208/' },
-  { name: 'Yashdeep', image: yashDeep, role: 'CPO', department: 'Technical', linkedin: 'https://www.linkedin.com/in/yashdeep0/' },
-  { name: 'Abhilasha', image: abhilashaImage, role: 'CTO(E)', department: 'Technical', linkedin: 'https://www.linkedin.com/in/abhilasha-marmat/' },
+  { name: 'Nikesh Bisht', image: nikeshImg, role: 'CEO', department: 'Business', linkedin: 'https://www.linkedin.com/in/nikeshbisht/' },
+  { name: 'Sushmita Patil', image: sushmitaImg, role: 'COO', department: 'Business', linkedin: 'https://www.linkedin.com/in/sushmita-patil-687404219/' },
+  { name: 'Ankit Kumar', image: ankitImg, role: 'CTO(M)', department: 'Technical', linkedin: 'https://www.linkedin.com/in/ankit-kumar-119396208/' },
+  { name: 'Abhilasha Marmat', image: abhilashaImage, role: 'CTO(E)', department: 'Technical', linkedin: 'https://www.linkedin.com/in/abhilasha-marmat/' },
+  { name: 'Yashdeep Singh', image: yashDeep, role: 'CPO', department: 'Technical', linkedin: 'https://www.linkedin.com/in/yashdeep0/' },
 ];
 
 const coreTeam = [
-  { name: 'Manasi', image: manasiImg, role: 'Business & Strategy', department: 'Business', fullTitle: "Founder's Office", linkedin: 'https://www.linkedin.com/in/manasi-korade-1949611a4/' },
-  { name: 'Anees', image: anish, role: 'Founding Engineer', department: 'Technical', fullTitle: ' Electrical Systems', linkedin: 'https://www.linkedin.com/in/anees-ahmed-khan-01300b267/' },
-  { name: 'Ritik', image: ritikImg, role: 'Founding Engineer', department: 'Technical', fullTitle: 'Mechanical Systems', linkedin: 'https://www.linkedin.com/in/ritwik-mukherjee1/' },
-  { name: 'Pritish', image: pritishImg, role: 'Automotive Designer', department: 'Technical', fullTitle: 'Design Lead', linkedin: 'https://www.linkedin.com/in/pritish-karmi-91124717b/' },
-  { name: 'Servesh', image: servesh, role: 'Mechanical Engineer', department: 'Technical', fullTitle: 'Engineering Support', linkedin: 'https://www.linkedin.com/in/sarvesh-kailas-thopate-65139523b/' },
-  { name: 'Soham', image: sohamImg, role: 'Firmware Engineer', department: 'Technical', fullTitle: 'Electronics Systems', linkedin: 'https://www.linkedin.com/in/soham-patil-660621225/' },
-  { name: 'Ajeet', image: ajeetImg, role: 'Technical Associate', department: 'Technical', fullTitle: 'Engineering Support', linkedin: 'https://www.linkedin.com/in/ajeet-jangid-33b2bb1a5/' },
-  { name: 'Abhishek', image: abhishek, role: 'Technical Associate', department: 'Technical', fullTitle: 'Technical Associate', linkedin: 'https://www.linkedin.com/in/abhi-shek-1203b21b7/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
+  { name: 'Ritik Mukherjee', image: ritikImg, role: 'Founding Engineer', department: 'Technical', fullTitle: 'Mechanical Systems', linkedin: 'https://www.linkedin.com/in/ritwik-mukherjee1/' },
+  { name: 'Pritish Karmi', image: pritishImg, role: 'Automotive Designer', department: 'Technical', fullTitle: 'Design Lead', linkedin: 'https://www.linkedin.com/in/pritish-karmi-91124717b/' },
+  { name: 'Manasi Korade', image: manasiImg, role: 'Business & Strategy', department: 'Business', fullTitle: "Founder's Office", linkedin: 'https://www.linkedin.com/in/manasi-korade-1949611a4/' },
+  { name: 'Anees Ahmed Khan', image: anish, role: 'Founding Engineer', department: 'Technical', fullTitle: ' Electrical Systems', linkedin: 'https://www.linkedin.com/in/anees-ahmed-khan-01300b267/' },
+  { name: 'Servesh Thopate', image: servesh, role: 'Mechanical Engineer', department: 'Technical', fullTitle: 'Engineering Support', linkedin: 'https://www.linkedin.com/in/sarvesh-kailas-thopate-65139523b/' },
+  { name: 'Soham Patil', image: sohamImg, role: 'Firmware Engineer', department: 'Technical', fullTitle: 'Electronics Systems', linkedin: 'https://www.linkedin.com/in/soham-patil-660621225/' },
+  { name: 'Ajeet Jangid', image: ajeetImg, role: 'Technical Associate', department: 'Technical', fullTitle: 'Engineering Support', linkedin: 'https://www.linkedin.com/in/ajeet-jangid-33b2bb1a5/' },
+  { name: 'Abhishek Gour', image: abhishek, role: 'Technical Associate', department: 'Technical', fullTitle: 'Technical Associate', linkedin: 'https://www.linkedin.com/in/abhi-shek-1203b21b7/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
 ];
 const About = () => {
   const router = useRouter()
@@ -60,8 +60,8 @@ const About = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Revolutionizing urban mobility with modular electric vehicles, 
-            powered by IIT Delhi innovation and Formula Student expertise.
+         Building a seamless zero-emission ecosystem powered by purpose-built vehicles, AI-driven battery swapping, and microfactories for sustainable urban mobility.
+
           </p>
         </div>
         
@@ -86,27 +86,39 @@ const About = () => {
               </h2>
             </div>
             
-            <div className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed">
-              <p className="hover:text-foreground/80 transition-colors">
-                Blinq Mobility was founded in 2024 with a bold vision to make electric mobility the default choice for the masses. 
-                The company was started by <span className="text-primary font-semibold">Nikesh, Ankit, Abhilasha, Sushmita, and Yashdeep</span>, 
-                all of whom share a common DNA. They were part of <span className="text-accent font-semibold">IIT Delhi's AXLR8R Formula Racing team</span>, 
-                where they designed, built, and raced Formula-style electric cars at international competitions.
-              </p>
-              
-              <p className="hover:text-foreground/80 transition-colors">
-                Those years on the racing circuit taught us far more than just speed. We learned how to 
-                <span className="text-electric-blue font-semibold"> engineer reliable EVs from scratch</span>, lead diverse teams, 
-                manage limited resources like a startup, and innovate under pressure.
-              </p>
-              
-              <p className="hover:text-foreground/80 transition-colors">
-                Today, we are channeling that experience into the city streets. Our first product, the 
-                <span className="text-gradient font-semibold"> Blinq Pod</span>, is a lightweight, modular electric vehicle 
-                with <span className="text-electric-cyan font-semibold">less than 5-minute swappable batteries</span>, built to deliver safe, 
-                comfortable, and affordable rides without the downtime of charging.
-              </p>
-            </div>
+           <div className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed">
+  <p className="hover:text-foreground/80 transition-colors">
+    Blinq Mobility was founded in 2024 with a bold vision to make electric mobility the 
+    <span className="text-primary font-semibold"> default choice for the masses</span>. 
+    The company was started by 
+     Nikesh, Ankit, Abhilasha, Sushmita, and Yashdeep, 
+    with a common DNA.
+  </p>
+
+  <p className="hover:text-foreground/80 transition-colors">
+    We were part of 
+    <span className="text-electric-blue font-semibold"> IIT Delhi’s AXLR8R Formula Racing team</span>, 
+    where we designed, built, and raced 
+    <span className="text-electric-blue font-semibold"> Formula-style electric cars</span> 
+    at international competitions. Those years on the racing circuit taught us far more than just speed. 
+    We learned how to 
+engineer reliable EVs from scratch, 
+    lead diverse teams, manage limited resources like a startup, and innovate under pressure. 
+    These lessons became the foundation for Blinq Mobility.
+  </p>
+
+  <p className="hover:text-foreground/80 transition-colors">
+    Today, we are channeling that experience into the city streets. Our first product, the 
+    Blinq Pod, is a lightweight, modular electric vehicle 
+    with less than 5-minute swappable batteries, 
+    built to deliver safe, comfortable, and affordable rides without the downtime of charging. 
+    Starting with the ride-hailing market, 
+    <span className="text-electric-blue font-semibold">
+      we are creating technology that makes mobility more efficient for drivers, operators, and passengers alike
+    </span>.
+  </p>
+</div>
+
           </div>
           </div>
           
@@ -225,38 +237,44 @@ const About = () => {
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 relative z-10">
-                {coreTeam.map((member, index) => (
-                  <Card 
-                    key={member.name}
-                    className="p-6 bg-card-gradient border border-electric-blue/20 hover:border-electric-blue/40 hover:shadow-electric transition-all duration-300 group"
-                    style={{ animationDelay: `${(index + 4) * 0.1}s` }}
-                  >
-                    <div className="relative mb-4">
-                      <Image 
-                        src={member.image} 
-                        alt={member.name}
-                        className="w-full aspect-square object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-electric-blue/60"></div>
-                    </div>
-                    
-                    <div className="text-center">
-                      <h3 className="font-semibold text-base mb-1">{member.name}</h3>
-                      <p className="text-sm font-medium mb-1 text-electric-blue">{member.role}</p>
-                      <p className="text-xs text-muted-foreground mb-4">{member.fullTitle}</p>
-                       <a 
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center w-8 h-8 md:w-9 md:h-9 bg-[#0A66C2] rounded-lg hover:bg-[#004182] hover:scale-110 transition-all duration-300 shadow-lg"
-                    >
-                      <Linkedin className="w-4 h-4 text-white fill-white" />
-                    </a>
-                    </div>
-                  </Card>
-                ))}
-              </div>
+
+ <div className="flex flex-wrap justify-center gap-6 relative z-10">
+  {coreTeam.map((member, index) => (
+    <Card
+      key={member.name}
+      className="p-6 bg-card-gradient border border-electric-blue/20 hover:border-electric-blue/40 hover:shadow-electric transition-all duration-300 group w-full sm:w-[280px] md:w-[300px] lg:w-[230px]"
+      style={{ animationDelay: `${(index + 4) * 0.1}s` }}
+    >
+      <div className="relative mb-4">
+        <Image
+          src={member.image}
+          alt={member.name}
+          className="w-full aspect-square object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+        />
+        <div className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-electric-blue/60"></div>
+      </div>
+
+      <div className="text-center">
+        <h3 className="font-semibold text-base mb-1">{member.name}</h3>
+        <p className="text-sm font-medium mb-1 text-electric-blue">{member.role}</p>
+        <p className="text-xs text-muted-foreground mb-4">{member.fullTitle}</p>
+
+        <a
+          href={member.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center w-8 h-8 md:w-9 md:h-9 bg-[#0A66C2] rounded-lg hover:bg-[#004182] hover:scale-110 transition-all duration-300 shadow-lg"
+        >
+          <Linkedin className="w-4 h-4 text-white fill-white" />
+        </a>
+      </div>
+    </Card>
+  ))}
+</div>
+
+
+
+
             </div>
           </div>
         </div>
@@ -280,14 +298,14 @@ const About = () => {
 
           {/* Enhanced Gallery Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="relative group overflow-hidden rounded-2xl aspect-[4/3] animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            {/* <div className="relative group overflow-hidden rounded-2xl aspect-[4/3] animate-fade-in" style={{ animationDelay: '0.1s' }}>
               <img 
                 src="https://res.cloudinary.com/doze8mibh/image/upload/v1759684625/Copy_of_IMG_20250913_001938_beqffh.jpg" 
                 alt="Blinq team culture"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
-            </div>
+            </div> */}
             
             <div className="relative group overflow-hidden rounded-2xl aspect-[4/3] animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <img 

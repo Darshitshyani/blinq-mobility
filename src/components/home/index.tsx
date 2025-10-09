@@ -25,7 +25,7 @@ const HomePage: React.FC = () => {
 
   <div className="w-full px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-center">
 
-  <h1 className="text-5xl md:text-7xl font-bold mb-6 lg:w-[70%] ">Revolutionizing Urban Mobility with<span className="text-gradient"> Modular EVs & 5-Minute Battery Swaps.</span></h1>
+  <h1 className="text-5xl md:text-7xl font-bold mb-6 lg:w-[70%] ">Revolutionizing Urban Mobility with<span className="text-gradient"> Compact EVs & Quick Battery Swaps.</span></h1>
   <h1 className="text-[20px] text-[#ccc]">Safer, cleaner, and more affordable rides for your daily commute.</h1>
   
 				
@@ -35,7 +35,7 @@ const HomePage: React.FC = () => {
             <div className="w-[60%] mt-20">
               <h3 className="text-4xl font-semibold text-primary mb-3">Our Mission</h3>
               <p className="text-muted-foreground text-lg lg:text-xl leading-relaxed">
-               Our Mission Make EVs the default choice of commute for the masses by overcoming range anxiety, charging downtime, and high upfront costs and making them better than ICE Vehicles in every way.
+               We are on a Mission to Make EVs the default choice of commute for the masses by overcoming range anxiety, charging downtime, and high upfront costs and making them better than ICE Vehicles in every way.
 
               </p>
             </div>
