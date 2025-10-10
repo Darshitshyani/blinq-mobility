@@ -5,21 +5,21 @@ const problems = [
     icon: Clock,
     problem: "Downtime",
     description: "Hours wasted on charging",
-    solution: " with 5-minute swaps",
+    solution: " With 5-minute swaps",
     color: "text-danger"
   },
   {
     icon: DollarSign,
     problem: "High Asset Costs",
     description: "Expensive per km running with 40% of an EV’s cost is the battery",
-    solution: " through B-A-A-S model.",
+    solution: " Through B-A-A-S model.",
     color: "text-warning"
   },
   {
     icon: Frown,
     problem: "Driver Anxiety",
     description: "Battery life & range worries",
-    solution: " with guaranteed battery health + instant 250 km range",
+    solution: " With guaranteed battery health + instant 250 km range",
     color: "text-electric-purple"
   }
 ];

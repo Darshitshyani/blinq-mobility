@@ -32,11 +32,11 @@ const boardMembers = [
 ];
 
 const coreTeam = [
-  { name: 'Ritik Mukherjee', image: ritikImg, role: 'Founding Engineer', department: 'Technical', fullTitle: 'Mechanical Systems', linkedin: 'https://www.linkedin.com/in/ritwik-mukherjee1/' },
+  { name: 'Ritwik Mukherjee', image: ritikImg, role: 'Founding Engineer', department: 'Technical', fullTitle: 'Mechanical Systems', linkedin: 'https://www.linkedin.com/in/ritwik-mukherjee1/' },
   { name: 'Pritish Karmi', image: pritishImg, role: 'Automotive Designer', department: 'Technical', fullTitle: 'Design Lead', linkedin: 'https://www.linkedin.com/in/pritish-karmi-91124717b/' },
   { name: 'Manasi Korade', image: manasiImg, role: 'Business & Strategy', department: 'Business', fullTitle: "Founder's Office", linkedin: 'https://www.linkedin.com/in/manasi-korade-1949611a4/' },
   { name: 'Anees Ahmed Khan', image: anish, role: 'Founding Engineer', department: 'Technical', fullTitle: ' Electrical Systems', linkedin: 'https://www.linkedin.com/in/anees-ahmed-khan-01300b267/' },
-  { name: 'Servesh Thopate', image: servesh, role: 'Mechanical Engineer', department: 'Technical', fullTitle: 'Engineering Support', linkedin: 'https://www.linkedin.com/in/sarvesh-kailas-thopate-65139523b/' },
+  { name: 'Sarvesh Thopate', image: servesh, role: 'Mechanical Engineer', department: 'Technical', fullTitle: 'Engineering Support', linkedin: 'https://www.linkedin.com/in/sarvesh-kailas-thopate-65139523b/' },
   { name: 'Soham Patil', image: sohamImg, role: 'Firmware Engineer', department: 'Technical', fullTitle: 'Electronics Systems', linkedin: 'https://www.linkedin.com/in/soham-patil-660621225/' },
   { name: 'Ajeet Jangid', image: ajeetImg, role: 'Technical Associate', department: 'Technical', fullTitle: 'Engineering Support', linkedin: 'https://www.linkedin.com/in/ajeet-jangid-33b2bb1a5/' },
   { name: 'Abhishek Gour', image: abhishek, role: 'Technical Associate', department: 'Technical', fullTitle: 'Technical Associate', linkedin: 'https://www.linkedin.com/in/abhi-shek-1203b21b7/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },

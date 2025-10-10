@@ -96,8 +96,10 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    <div className="mx-auto text-black font-extrabold uppercase w-full text-primary flex justify-center items-center">
-  <h1 className="text-[7vw] leading-none tracking-[1vw]">SWAP DRIVE REPEAT</h1>
+    <div className="mx-auto text-black font-extrabold uppercase w-full text-primary flex justify-center items-center gap-[50px]">
+  <h1 className="text-[7vw] leading-none ">SWAP</h1>
+    <h1 className="text-[7vw] leading-none"> DRIVE </h1>
+      <h1 className="text-[7vw] leading-none">REPEAT</h1>
 </div>
 
     </footer>
