@@ -108,11 +108,7 @@ const router = useRouter();
       {/* Hero Section - Car Technology */}
           <section className="relative py-10 md:py-24 overflow-hidden" id="swap">
         {/* Background */}
-        <div className="absolute inset-0">
-          <div className="absolute " />
-          <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-electric-cyan/20 rounded-full blur-3xl animate-glow-pulse" />
-        </div>
-
+       
         <div className="relative z-10 container mx-auto px-6">
           {/* Swap Hero */}
           <div ref={swapHeroAnimation.ref} className={`text-center mb-16 ${swapHeroAnimation.isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
@@ -267,15 +263,16 @@ const router = useRouter();
       </section>
       <section className="relative  flex items-center justify-center overflow-hidden" id="vehicles">
         {/* Background gradient */}
-        <div className="absolute inset-0 " />
+        {/* <div className="absolute inset-0 " /> */}
         
         {/* Animated background elements */}
-        <div className="absolute inset-0 opacity-30">
+        {/* <div className="absolute inset-0 opacity-30">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-electric-blue rounded-full blur-3xl animate-float" />
           <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-electric-cyan rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}} />
-        </div>
+        </div> */}
 
-        <div className="relative z-10  flex flex-col items-center px-6 gap-12 items-center" >
+        <div className="relative z-10  flex flex-col items-center  gap-12 items-center" >
+          
           {/* Hero content */}
           <div ref={heroAnimation.ref} className={` space-y-8 ${heroAnimation.isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}>
             <div>
@@ -319,12 +316,14 @@ const router = useRouter();
             </div> */}
           </div>
 
-          {/* Hero image */}
           <div className={`relative ${heroAnimation.isVisible ? 'animate-scale-in' : 'opacity-0'}`}>
            <div className={`relative ${heroAnimation.isVisible ? 'animate-scale-in' : 'opacity-0'}`}>
+            <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-black/10 to-transparent pointer-events-none" />
+<div className="absolute bottom-0 left-0 w-full h-[40px] bg-gradient-to-t from-background to-transparent pointer-events-none" />
+            
             <video
-  className="w-full h-[600px] rounded-xl object-cover"
-  src="https://res.cloudinary.com/doze8mibh/video/upload/v1759483700/360_Degree_Video_pykn1i.mp4"
+  className="w-full h-full  object-cover"
+  src="https://res.cloudinary.com/doze8mibh/video/upload/v1760353987/360new_sufbux.mp4"
   autoPlay
   loop
   muted

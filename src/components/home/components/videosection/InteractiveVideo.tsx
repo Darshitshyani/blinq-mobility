@@ -12,14 +12,14 @@ export interface Hotspot {
 const DEFAULT_HOTSPOTS: Hotspot[] = [
   {
     id: 'Microfactory',
-    x: 35,
-    y: 15,
+    x: 30,
+    y: 21,
     title: 'Microfactory',
     links:"/technology#vehicles",
   },
   {
     id: 'Fleets',
-    x: 52,
+    x: 56,
     y: 30,
     title: 'Fleets',
     links: "/fleets",
@@ -33,29 +33,29 @@ const DEFAULT_HOTSPOTS: Hotspot[] = [
   },
   {
     id: 'aboutus',
-    x: 54,
-    y: 13,
+    x: 64,
+    y: 19,
     title: 'About Us',
     links: "/about-us",
   },
   {
     id: 'Blogs',
     x: 80,
-    y: 25,
+    y: 35,
     title: 'Blogs',
     links: "/#blog",
   },
   {
     id: 'Vehicles',
-    x: 44,
-    y: 35,
+    x: 28,
+    y: 39,
     title: 'Vehicles',
     links: "/technology#vehicles",
   },
   {
     id: 'Our mission',
     x: 20,
-    y: 10,
+    y: 15,
     title: 'Our mission',
     links: "/#mission",
   },
@@ -63,10 +63,17 @@ const DEFAULT_HOTSPOTS: Hotspot[] = [
 
 // Mobile-specific positions
 const MOBILE_HOTSPOTS: Hotspot[] = [
+    {
+    id: 'Our mission',
+    x: 10,
+    y: 20,
+    title: 'Our mission',
+    links: "/#mission",
+  },
   {
     id: 'Microfactory',
-    x: 35,
-    y: 15,
+    x: 30,
+    y:20,
     title: 'Microfactory',
     links:"/technology#vehicles",
   },
@@ -86,8 +93,8 @@ const MOBILE_HOTSPOTS: Hotspot[] = [
   },
   {
     id: 'aboutus',
-    x: 54,
-    y: 15,
+    x: 66,
+    y: 22,
     title: 'About Us',
     links: "/about-us",
   },
@@ -100,8 +107,8 @@ const MOBILE_HOTSPOTS: Hotspot[] = [
   },
   {
     id: 'Vehicles',
-    x: 30,
-    y: 35,
+    x: 20,
+    y: 40,
     title: 'Vehicles',
     links: "/technology#vehicles",
   },
@@ -196,12 +203,12 @@ export const InteractiveVideo = () => {
       {/* Video Container */}
       <div 
         ref={containerRef}
-        className="video-container relative bg-card h-[80vh] object-cover md:h-screen overflow-hidden shadow-2xl"
+        className="video-container relative bg-card  object-cover h-[50vh] md:h-full overflow-hidden shadow-2xl"
       >
         <video
           ref={videoRef}
           className="w-full h-full object-cover"
-          src="https://res.cloudinary.com/doze8mibh/video/upload/v1723456789/city_z5jxeu.mp4"
+          src="https://res.cloudinary.com/doze8mibh/video/upload/v1760350182/NewCity_ua2etg.mp4"
           autoPlay
           loop
           muted
@@ -213,7 +220,7 @@ export const InteractiveVideo = () => {
         {containerSize.width > 0 && containerSize.height > 0 && hotspots.map((hotspot) => (
           <div
             key={hotspot.id}
-            className="hotspot absolute z-10 bg-primary-main/80 hover:bg-primary-main/100 hover:scale-110 transition-all duration-300 rounded-full p-1 cursor-pointer"
+            className="hotspot absolute z-[10000] bg-primary-main/80 hover:bg-primary-main/100 hover:scale-110 transition-all duration-300 rounded-full p-1 cursor-pointer"
             style={{
               left: `${hotspot.x}%`,
               top: `${hotspot.y}%`,

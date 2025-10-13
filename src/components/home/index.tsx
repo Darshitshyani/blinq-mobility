@@ -11,7 +11,7 @@ const HomePage: React.FC = () => {
   return (
     <>
    
-  <div className="w-full lg:min-h-screen relative ">
+  <div className="w-full  relative ">
     <InteractiveVideo />
 
 <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-black/10 to-transparent pointer-events-none" />

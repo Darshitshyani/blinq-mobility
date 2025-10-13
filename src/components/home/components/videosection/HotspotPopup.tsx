@@ -39,7 +39,7 @@ export const HotspotPopup = ({
 
   return (
     <div
-      className={`popup absolute z-[200] p-1 md:p-4 rounded-lg md:rounded-xl flex justify-center items-center w-fit border border-white/20 shadow-xl 
+      className={`popup absolute z-[50000] p-1 md:p-4 rounded-lg md:rounded-xl flex justify-center items-center w-fit border border-white/20 shadow-xl 
       bg-muted backdrop-xl backdrop-saturate-150 transition-all duration-300
       ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
       style={{
