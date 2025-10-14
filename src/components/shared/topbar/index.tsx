@@ -46,8 +46,8 @@ const Topbar = () => {
   return (
     <>
       <div
-        className={`h-[90px] w-full pb-[35px] md:pb-0 flex justify-between items-center px-3 fixed z-50 transition-all duration-300 ${
-          scrolled ? "bg-white/10 backdrop-blur-2xl border-gray-200 shadow-sm  pb-0" : ""
+        className={`h-[90px] w-full  md:pb-0 flex justify-between items-center px-3 fixed z-50 transition-all duration-300 ${
+          scrolled ? "bg-white/10 backdrop-blur-2xl border-gray-200 shadow-sm pb-0" : "pb-[35px]"
         }`}
       >
         {/* Logo */}

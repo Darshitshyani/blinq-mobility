@@ -59,7 +59,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Quick Links</h4>
+            <h4 className="font-semibold text-foreground mb-4 mt-4">Quick Links</h4>
             <ul className="space-y-3">
               {pageLinks.map((link) => (
                 <li key={link.name}>
@@ -96,7 +96,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    <div className="mx-auto text-black font-extrabold uppercase w-full text-primary flex justify-center items-center gap-[50px]">
+    <div className="mx-auto my-[20px] text-black font-extrabold uppercase w-full text-primary flex justify-center items-center gap-[50px]">
   <h1 className="text-[7vw] leading-none ">SWAP</h1>
     <h1 className="text-[7vw] leading-none"> DRIVE </h1>
       <h1 className="text-[7vw] leading-none">REPEAT</h1>
