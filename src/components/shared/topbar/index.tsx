@@ -180,7 +180,7 @@ const Topbar = () => {
           />
           {/* Sidebar */}
           <div
-            className={`fixed w-[85%] h-full bg-background/95 backdrop-blur-3xl right-0 flex flex-col z-50 shadow-xl 
+            className={`fixed w-[85%] h-full bg-background/95 backdrop-blur-3xl right-0 flex flex-col z-[500000] shadow-xl 
               ${isClosing ? "animate-slide-out-right" : "animate-slide-in-left"}`}
           >
             <div className="h-[70px] border-b border-acent w-full flex justify-between items-center px-4">
