@@ -59,7 +59,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4 mt-4">Quick Links</h4>
+            <h4 className="font-semibold text-foreground my-4 ">Quick Links</h4>
             <ul className="space-y-3">
               {pageLinks.map((link) => (
                 <li key={link.name}>
@@ -75,9 +75,9 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-  <div className="mb-6 w-full">
+  <div className="my-4 w-full">
               
-              <p className="text-muted-foreground text-start leading-relaxed mb-6">
+              <p className="text-muted-foreground text-start leading-relaxed ">
                Making EVs the default choice of commute for the masses by solving the adoption challenges by technolog, and making them better than ICE Vehicles in every way.
 
               </p>
