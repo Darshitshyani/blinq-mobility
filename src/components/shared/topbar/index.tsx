@@ -47,7 +47,7 @@ const Topbar = () => {
     <>
       <div
         className={`h-[90px] w-full  md:pb-0 flex justify-between items-center px-3 fixed z-50 transition-all duration-300 ${
-          scrolled ? "bg-white/10 backdrop-blur-2xl border-gray-200 shadow-sm pb-0" : "pb-[35px]"
+          scrolled ? "bg-white/10 backdrop-blur-2xl border-gray-200 shadow-sm pb-0 z-[50000]" : "pb-[35px]"
         }`}
       >
         {/* Logo */}
@@ -163,7 +163,7 @@ const Topbar = () => {
 
         {/* Mobile Menu Button */}
         <div
-          className="flex sm:flex md:flex lg:hidden xl:hidden cursor-pointer p-2 rounded-full hover:bg-primary transition-colors duration-200"
+          className="flex sm:flex md:flex lg:hidden xl:hidden cursor-pointer p-2 z-[45000] rounded-full hover:bg-primary transition-colors duration-200"
           onClick={() => setIsOpen(!isOpen)}
         >
           <MenuIcon />
@@ -175,7 +175,7 @@ const Topbar = () => {
         <>
           {/* Backdrop */}
           <div
-            className="fixed inset-0 bg-black/30 backdrop-blur-2xl z-40 animate-fade-in"
+            className="fixed inset-0 bg-black/30 backdrop-blur-2xl z-[40000] animate-fade-in"
             onClick={handleSidebarClose}
           />
           {/* Sidebar */}
