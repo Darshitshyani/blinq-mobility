@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/shared/Button";
 import { Card } from "@/components/shared/Card";
 import { useTechScrollAnimation } from "@/hooks/useTechScrollAnimation";
 
@@ -131,10 +130,7 @@ const router = useRouter();
         /> 
         </div></div>  
           
-            {/* Swap Animation */}
-            {/* <div className="mb-12">
-              <SwapAnimation />
-            </div> */}
+      
 
             {/* Swap highlights */}
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -331,11 +327,7 @@ const router = useRouter();
   preload="metadata"
 />
 
-              {/* <div className="absolute top-4 right-4 animate-bounce-in h-fit">
-                <div className="bg-card/90 backdrop-blur-sm rounded-lg flex  h-[80px] shadow-electric">
-                  <AnimatedBattery />
-                </div>
-              </div> */}
+            
           </div>
           
             <div className="relative">
@@ -346,11 +338,7 @@ const router = useRouter();
               {/* Floating tech indicators */}
               
             </div>
-              {/* <div className="absolute bottom-4 left-4 animate-bounce-in" style={{animationDelay: '0.5s'}}>
-                <div className="bg-card/90 backdrop-blur-sm rounded-lg p-4">
-                  <AnimatedCar />
-                </div>
-              </div> */}
+           
           </div>
         </div>
       </section>
