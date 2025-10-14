@@ -355,84 +355,91 @@ const router = useRouter();
             Every component designed for improved safety and efficiency.
             </p>
           </div>
+<div className="grid lg:grid-cols-4 gap-8">
+  {/* Feature content — show first on mobile */}
+  <div className="lg:col-span-3 order-1 lg:order-2">
+    <Card className="overflow-hidden bg-card-gradient border-electric-blue/20 shadow-xl h-full w-full">
+      <div className="relative overflow-hidden aspect-[16/9] sm:aspect-[4/3] md:aspect-video">
+        {techFeatures[activeFeature].image && (
+          <Image
+            src={techFeatures[activeFeature].image ?? ""}
+            alt={techFeatures[activeFeature].title}
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          />
+        )}
 
-          <div className="grid lg:grid-cols-4 gap-8">
-            {/* Feature navigation */}
-            <div className="lg:col-span-1 space-y-4">
-              <div className="sticky top-24">
-                {techFeatures.map((feature, index) => (
-                  <button
-                    key={feature.id}
-                    onClick={() => setActiveFeature(index)}
-                    className={`w-full text-left p-4 rounded-xl transition-all duration-300 ${
-                      activeFeature === index 
-                        ? 'bg-primary text-primary-foreground shadow-electric' 
-                        : 'hover:bg-card/50'
-                    }`}
-                  >
-                    <div className="flex items-center space-x-3">
-                      <div className="min-w-[3rem] flex items-center justify-center">
-                        <FeatureIcon 
-                          type={feature.id as any} 
-                          className={activeFeature === index ? 'text-primary-foreground w-8 h-6' : 'text-primary w-8 h-6'} 
-                        />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-sm">{feature.title}</h3>
-                      </div>
-                    </div>
-                  </button>
-                ))}
-              </div>
+        {techFeatures[activeFeature]?.video && (
+          <video
+            className="w-full h-auto rounded-xl object-cover"
+            src={techFeatures[activeFeature]?.video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+          />
+        )}
+
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+
+        {/* Feature overlay */}
+        <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6">
+          <div className="flex items-center space-x-3 sm:space-x-4">
+            <div className="bg-primary/20 backdrop-blur-sm rounded-lg p-3 sm:p-4 min-w-[2.5rem] sm:min-w-[3rem] flex items-center justify-center">
+              <FeatureIcon
+                type={techFeatures[activeFeature].id as any}
+                className="text-primary w-6 h-6 sm:w-8 sm:h-6"
+              />
             </div>
-
-            {/* Feature content */}
-          <div className="lg:col-span-3">
-  <Card className="overflow-hidden bg-card-gradient border-electric-blue/20 shadow-xl h-full w-full">
-    <div className="relative overflow-hidden aspect-[16/9] sm:aspect-[4/3] md:aspect-video">
-    {techFeatures[activeFeature].image && (
-  <Image
-    src={techFeatures[activeFeature].image ??""}
-    alt={techFeatures[activeFeature].title}
-    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-  />
-)}
-      {techFeatures[activeFeature]?.video && <video
-  className="w-full h-auto rounded-xl object-cover"
-  src={techFeatures[activeFeature]?.video}
-  autoPlay
-  loop
-  muted
-  playsInline
-  preload="metadata"
-/> }
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-
-      {/* Feature overlay */}
-      <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6">
-        <div className="flex items-center space-x-3 sm:space-x-4">
-          <div className="bg-primary/20 backdrop-blur-sm rounded-lg p-3 sm:p-4 min-w-[2.5rem] sm:min-w-[3rem] flex items-center justify-center">
-            <FeatureIcon
-              type={techFeatures[activeFeature].id as any}
-              className="text-primary w-6 h-6 sm:w-8 sm:h-6"
-            />
-          </div>
-          <div>
-            <h3 className="text-base sm:text-lg md:text-2xl font-bold text-foreground mb-1 md:mb-2">
-              {techFeatures[activeFeature].title}
-            </h3>
-            <p className="text-xs sm:text-sm md:text-md text-muted-foreground leading-snug">
-              {techFeatures[activeFeature].description}
-            </p>
+            <div>
+              <h3 className="text-base sm:text-lg md:text-2xl font-bold text-foreground mb-1 md:mb-2">
+                {techFeatures[activeFeature].title}
+              </h3>
+              <p className="text-xs sm:text-sm md:text-md text-muted-foreground leading-snug">
+                {techFeatures[activeFeature].description}
+              </p>
+            </div>
           </div>
         </div>
       </div>
+    </Card>
+  </div>
+
+  {/* Feature navigation — show second on mobile */}
+  <div className="lg:col-span-1 space-y-4 order-2 lg:order-1">
+    <div className="sticky top-24">
+      {techFeatures.map((feature, index) => (
+        <button
+          key={feature.id}
+          onClick={() => setActiveFeature(index)}
+          className={`w-full text-left p-4 rounded-xl transition-all duration-300 ${
+            activeFeature === index
+              ? "bg-primary text-primary-foreground shadow-electric"
+              : "hover:bg-card/50"
+          }`}
+        >
+          <div className="flex items-center space-x-3">
+            <div className="min-w-[3rem] flex items-center justify-center">
+              <FeatureIcon
+                type={feature.id as any}
+                className={
+                  activeFeature === index
+                    ? "text-primary-foreground w-8 h-6"
+                    : "text-primary w-8 h-6"
+                }
+              />
+            </div>
+            <div>
+              <h3 className="font-semibold text-sm">{feature.title}</h3>
+            </div>
+          </div>
+        </button>
+      ))}
     </div>
-  </Card>
+  </div>
 </div>
 
-          </div>
         </div>
       </section>
 
